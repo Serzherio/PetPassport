@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9305D39767B17FD1CB978E28 /* Pods_PetPasport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7C80EF24D4D7E2CFD3A126 /* Pods_PetPasport.framework */; };
+		D50896C025FDFE63003F6281 /* Vaction in Resources */ = {isa = PBXBuildFile; fileRef = D50896BD25FDFE62003F6281 /* Vaction */; };
+		D50896C125FDFE63003F6281 /* Bugs in Resources */ = {isa = PBXBuildFile; fileRef = D50896BE25FDFE63003F6281 /* Bugs */; };
+		D50896C225FDFE63003F6281 /* Parasites in Resources */ = {isa = PBXBuildFile; fileRef = D50896BF25FDFE63003F6281 /* Parasites */; };
+		D51E1E60256891CA009D1ACF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51E1E5F256891CA009D1ACF /* InfoViewController.swift */; };
+		D51E1E622568A210009D1ACF /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51E1E612568A210009D1ACF /* WebKit.framework */; };
+		D57409662795597800F04FE2 /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57409652795597800F04FE2 /* AddPetViewController.swift */; };
+		D57409682795805900F04FE2 /* AddPetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57409672795805900F04FE2 /* AddPetTableViewController.swift */; };
+		D57E1CED27B44978003D02A4 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57E1CEC27B44978003D02A4 /* CalendarManager.swift */; };
+		D5933A0827244ED900E32CD2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5933A0727244ED900E32CD2 /* GoogleService-Info.plist */; };
+		D59E2D352796FF81006396CC /* AddPetTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E2D342796FF81006396CC /* AddPetTableViewControllerDelegate.swift */; };
+		D5A5E80624D5988C00D40FB6 /* ShowPetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A5E80524D5988C00D40FB6 /* ShowPetTableViewController.swift */; };
+		D5B6F17E25E4117300B89866 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B6F17D25E4117300B89866 /* CalendarViewController.swift */; };
+		D5C5B2C424A53DF400B37E9E /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C5B2C324A53DF400B37E9E /* PetTableViewCell.swift */; };
+		D5C5B2C624A7E1AD00B37E9E /* PetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C5B2C524A7E1AD00B37E9E /* PetsModel.swift */; };
+		D5CED9F5249F6554003DCF39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CED9F4249F6554003DCF39 /* AppDelegate.swift */; };
+		D5CED9F7249F6554003DCF39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CED9F6249F6554003DCF39 /* SceneDelegate.swift */; };
+		D5CED9FC249F6554003DCF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5CED9FA249F6554003DCF39 /* Main.storyboard */; };
+		D5CED9FE249F6556003DCF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5CED9FD249F6556003DCF39 /* Assets.xcassets */; };
+		D5CEDA01249F6556003DCF39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5CED9FF249F6556003DCF39 /* LaunchScreen.storyboard */; };
+		D5CEDA09249F72DD003DCF39 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CEDA08249F72DD003DCF39 /* MainTableViewController.swift */; };
+		D5D804A024B799D3006D8729 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D8049F24B799D3006D8729 /* StorageManager.swift */; };
+		D5F6066F25F69D59002DF1AE /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F6066D25F69D59002DF1AE /* UIScrollView+EmptyDataSet.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		639D6EA399D85C244239CAA1 /* Pods-PetPasport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetPasport.debug.xcconfig"; path = "Target Support Files/Pods-PetPasport/Pods-PetPasport.debug.xcconfig"; sourceTree = "<group>"; };
+		8FADBF873D897CE5BD14EB2A /* Pods-PetPasport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetPasport.release.xcconfig"; path = "Target Support Files/Pods-PetPasport/Pods-PetPasport.release.xcconfig"; sourceTree = "<group>"; };
+		CF7C80EF24D4D7E2CFD3A126 /* Pods_PetPasport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetPasport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D50896BD25FDFE62003F6281 /* Vaction */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Vaction; sourceTree = "<group>"; };
+		D50896BE25FDFE63003F6281 /* Bugs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bugs; sourceTree = "<group>"; };
+		D50896BF25FDFE63003F6281 /* Parasites */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Parasites; sourceTree = "<group>"; };
+		D5093037271B41D20040C912 /* PetPasport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PetPasport.entitlements; sourceTree = "<group>"; };
+		D51E1E5F256891CA009D1ACF /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		D51E1E612568A210009D1ACF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		D57409652795597800F04FE2 /* AddPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetViewController.swift; sourceTree = "<group>"; };
+		D57409672795805900F04FE2 /* AddPetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetTableViewController.swift; sourceTree = "<group>"; };
+		D57E1CEC27B44978003D02A4 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		D5933A0727244ED900E32CD2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D59E2D342796FF81006396CC /* AddPetTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetTableViewControllerDelegate.swift; sourceTree = "<group>"; };
+		D5A5E80524D5988C00D40FB6 /* ShowPetTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPetTableViewController.swift; sourceTree = "<group>"; };
+		D5ABD2D625FD67C600D247DB /* PetPasport-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PetPasport-Bridging-Header.h"; path = "../PetPasport-Bridging-Header.h"; sourceTree = "<group>"; };
+		D5B6F17D25E4117300B89866 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		D5C5B2C324A53DF400B37E9E /* PetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
+		D5C5B2C524A7E1AD00B37E9E /* PetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsModel.swift; sourceTree = "<group>"; };
+		D5CED9F1249F6554003DCF39 /* PetPasport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetPasport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5CED9F4249F6554003DCF39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D5CED9F6249F6554003DCF39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D5CED9FB249F6554003DCF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D5CED9FD249F6556003DCF39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D5CEDA00249F6556003DCF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D5CEDA02249F6556003DCF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = PetPasport/SupportingFiles/Info.plist; sourceTree = SOURCE_ROOT; };
+		D5CEDA08249F72DD003DCF39 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		D5D8049F24B799D3006D8729 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StorageManager.swift; path = ../../StorageManager.swift; sourceTree = "<group>"; };
+		D5F6066D25F69D59002DF1AE /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		D5F6066E25F69D59002DF1AE /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5CED9EE249F6554003DCF39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D51E1E622568A210009D1ACF /* WebKit.framework in Frameworks */,
+				9305D39767B17FD1CB978E28 /* Pods_PetPasport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8488B5126273CDF5F6105AE2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				639D6EA399D85C244239CAA1 /* Pods-PetPasport.debug.xcconfig */,
+				8FADBF873D897CE5BD14EB2A /* Pods-PetPasport.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D50896C625FE048A003F6281 /* HTMLview */ = {
+			isa = PBXGroup;
+			children = (
+				D50896BE25FDFE63003F6281 /* Bugs */,
+				D50896BD25FDFE62003F6281 /* Vaction */,
+				D50896BF25FDFE63003F6281 /* Parasites */,
+			);
+			path = HTMLview;
+			sourceTree = "<group>";
+		};
+		D51E3978279A8A5100DB9908 /* AddPetControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D57409652795597800F04FE2 /* AddPetViewController.swift */,
+				D57409672795805900F04FE2 /* AddPetTableViewController.swift */,
+			);
+			path = AddPetControllers;
+			sourceTree = "<group>";
+		};
+		D59E2D332796FF43006396CC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D59E2D342796FF81006396CC /* AddPetTableViewControllerDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D5ABD2CC25FD66B200D247DB /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D5CED9F4249F6554003DCF39 /* AppDelegate.swift */,
+				D5CED9F6249F6554003DCF39 /* SceneDelegate.swift */,
+				D5CEDA02249F6556003DCF39 /* Info.plist */,
+				D5ABD2D625FD67C600D247DB /* PetPasport-Bridging-Header.h */,
+				D5ABD2DA25FD685700D247DB /* EmptyDataSet */,
+				D50896C625FE048A003F6281 /* HTMLview */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D5ABD2DA25FD685700D247DB /* EmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				D5F6066E25F69D59002DF1AE /* UIScrollView+EmptyDataSet.h */,
+				D5F6066D25F69D59002DF1AE /* UIScrollView+EmptyDataSet.m */,
+			);
+			name = EmptyDataSet;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D5CED9E8249F6554003DCF39 = {
+			isa = PBXGroup;
+			children = (
+				D5CED9F3249F6554003DCF39 /* PetPasport */,
+				D5CED9FD249F6556003DCF39 /* Assets.xcassets */,
+				D5CED9F2249F6554003DCF39 /* Products */,
+				8488B5126273CDF5F6105AE2 /* Pods */,
+				D87DF4DA06BD6F9C85617FEF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D5CED9F2249F6554003DCF39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5CED9F1249F6554003DCF39 /* PetPasport.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5CED9F3249F6554003DCF39 /* PetPasport */ = {
+			isa = PBXGroup;
+			children = (
+				D59E2D332796FF43006396CC /* Protocols */,
+				D5933A0727244ED900E32CD2 /* GoogleService-Info.plist */,
+				D5093037271B41D20040C912 /* PetPasport.entitlements */,
+				D5DA45EF256020600090A29E /* Model */,
+				D5DA45F0256020790090A29E /* View */,
+				D5DA45F1256020800090A29E /* Controller */,
+				D5ABD2CC25FD66B200D247DB /* SupportingFiles */,
+				D57E1CEC27B44978003D02A4 /* CalendarManager.swift */,
+			);
+			path = PetPasport;
+			sourceTree = "<group>";
+		};
+		D5DA45EF256020600090A29E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5D8049F24B799D3006D8729 /* StorageManager.swift */,
+				D5C5B2C524A7E1AD00B37E9E /* PetsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5DA45F0256020790090A29E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5C5B2C324A53DF400B37E9E /* PetTableViewCell.swift */,
+				D5CED9FF249F6556003DCF39 /* LaunchScreen.storyboard */,
+				D5CED9FA249F6554003DCF39 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5DA45F1256020800090A29E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5CEDA08249F72DD003DCF39 /* MainTableViewController.swift */,
+				D5A5E80524D5988C00D40FB6 /* ShowPetTableViewController.swift */,
+				D51E1E5F256891CA009D1ACF /* InfoViewController.swift */,
+				D5B6F17D25E4117300B89866 /* CalendarViewController.swift */,
+				D51E3978279A8A5100DB9908 /* AddPetControllers */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D87DF4DA06BD6F9C85617FEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D51E1E612568A210009D1ACF /* WebKit.framework */,
+				CF7C80EF24D4D7E2CFD3A126 /* Pods_PetPasport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D5CED9F0249F6554003DCF39 /* PetPasport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5CEDA05249F6556003DCF39 /* Build configuration list for PBXNativeTarget "PetPasport" */;
+			buildPhases = (
+				28154ECF9189DD8F86261BAB /* [CP] Check Pods Manifest.lock */,
+				D5CED9ED249F6554003DCF39 /* Sources */,
+				D5CED9EE249F6554003DCF39 /* Frameworks */,
+				D5CED9EF249F6554003DCF39 /* Resources */,
+				0FDD6F3007BE126E08311D75 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PetPasport;
+			productName = PetPasport;
+			productReference = D5CED9F1249F6554003DCF39 /* PetPasport.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5CED9E9249F6554003DCF39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "Сергей";
+				TargetAttributes = {
+					D5CED9F0249F6554003DCF39 = {
+						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1240;
+					};
+				};
+			};
+			buildConfigurationList = D5CED9EC249F6554003DCF39 /* Build configuration list for PBXProject "PetPasport" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D5CED9E8249F6554003DCF39;
+			productRefGroup = D5CED9F2249F6554003DCF39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5CED9F0249F6554003DCF39 /* PetPasport */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5CED9EF249F6554003DCF39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5CEDA01249F6556003DCF39 /* LaunchScreen.storyboard in Resources */,
+				D5CED9FE249F6556003DCF39 /* Assets.xcassets in Resources */,
+				D5CED9FC249F6554003DCF39 /* Main.storyboard in Resources */,
+				D50896C225FDFE63003F6281 /* Parasites in Resources */,
+				D50896C025FDFE63003F6281 /* Vaction in Resources */,
+				D50896C125FDFE63003F6281 /* Bugs in Resources */,
+				D5933A0827244ED900E32CD2 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FDD6F3007BE126E08311D75 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetPasport/Pods-PetPasport-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetPasport/Pods-PetPasport-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetPasport/Pods-PetPasport-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28154ECF9189DD8F86261BAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PetPasport-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5CED9ED249F6554003DCF39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5CED9F5249F6554003DCF39 /* AppDelegate.swift in Sources */,
+				D5CED9F7249F6554003DCF39 /* SceneDelegate.swift in Sources */,
+				D5F6066F25F69D59002DF1AE /* UIScrollView+EmptyDataSet.m in Sources */,
+				D57409682795805900F04FE2 /* AddPetTableViewController.swift in Sources */,
+				D51E1E60256891CA009D1ACF /* InfoViewController.swift in Sources */,
+				D5D804A024B799D3006D8729 /* StorageManager.swift in Sources */,
+				D57409662795597800F04FE2 /* AddPetViewController.swift in Sources */,
+				D5C5B2C624A7E1AD00B37E9E /* PetsModel.swift in Sources */,
+				D57E1CED27B44978003D02A4 /* CalendarManager.swift in Sources */,
+				D5A5E80624D5988C00D40FB6 /* ShowPetTableViewController.swift in Sources */,
+				D5C5B2C424A53DF400B37E9E /* PetTableViewCell.swift in Sources */,
+				D5B6F17E25E4117300B89866 /* CalendarViewController.swift in Sources */,
+				D59E2D352796FF81006396CC /* AddPetTableViewControllerDelegate.swift in Sources */,
+				D5CEDA09249F72DD003DCF39 /* MainTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D5CED9FA249F6554003DCF39 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5CED9FB249F6554003DCF39 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D5CED9FF249F6556003DCF39 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D5CEDA00249F6556003DCF39 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D5CEDA03249F6556003DCF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D5CEDA04249F6556003DCF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D5CEDA06249F6556003DCF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 639D6EA399D85C244239CAA1 /* Pods-PetPasport.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PetPasport/PetPasport.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJLV2F74LA;
+				INFOPLIST_FILE = PetPasport/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Sega.PetPasport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PetPasport/SupportingFiles/PetPasport-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D5CEDA07249F6556003DCF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FADBF873D897CE5BD14EB2A /* Pods-PetPasport.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PetPasport/PetPasport.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJLV2F74LA;
+				INFOPLIST_FILE = PetPasport/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Sega.PetPasport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PetPasport/SupportingFiles/PetPasport-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5CED9EC249F6554003DCF39 /* Build configuration list for PBXProject "PetPasport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5CEDA03249F6556003DCF39 /* Debug */,
+				D5CEDA04249F6556003DCF39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5CEDA05249F6556003DCF39 /* Build configuration list for PBXNativeTarget "PetPasport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5CEDA06249F6556003DCF39 /* Debug */,
+				D5CEDA07249F6556003DCF39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D5CED9E9249F6554003DCF39 /* Project object */;
+}

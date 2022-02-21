@@ -1,0 +1,41 @@
+{
+  "images" : [
+    {
+      "filename" : "Start screen.pdf",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Start screen-1.pdf",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Start screen-2.pdf",
+      "idiom" : "universal",
+      "scale" : "3x"
+    },
+    {
+      "filename" : "Start screen-3.pdf",
+      "idiom" : "iphone",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Start screen-4.pdf",
+      "idiom" : "iphone",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Start screen-5.pdf",
+      "idiom" : "iphone",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "compression-type" : "gpu-optimized-best"
+  }
+}

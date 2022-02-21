@@ -1,0 +1,30 @@
+PODS:
+  - FSCalendar (2.8.2)
+  - IQKeyboardManagerSwift (6.5.9)
+  - Realm (10.17.0):
+    - Realm/Headers (= 10.17.0)
+  - Realm/Headers (10.17.0)
+  - RealmSwift (10.17.0):
+    - Realm (= 10.17.0)
+
+DEPENDENCIES:
+  - FSCalendar
+  - IQKeyboardManagerSwift
+  - RealmSwift
+
+SPEC REPOS:
+  trunk:
+    - FSCalendar
+    - IQKeyboardManagerSwift
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
+  Realm: 9533276bd76f66aa2fd0d3ffe700c1f6023dcab6
+  RealmSwift: 57f5d59aa29852587aad1e861989e7af139894b5
+
+PODFILE CHECKSUM: cb2da3211df14cb086483e9311da8de229d532bf
+
+COCOAPODS: 1.11.2

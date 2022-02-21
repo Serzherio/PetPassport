@@ -1,0 +1,1458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ppv-0x-KND">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Паспорт питомца-->
+        <scene sceneID="yEg-bf-aC8">
+            <objects>
+                <tableViewController id="QuU-w8-7Uv" customClass="MainTableViewTableViewController" customModule="PetPasport" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" canCancelContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bKk-7s-qkR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="320" translatesAutoresizingMaskIntoConstraints="NO" id="g4c-sv-9Pn" customClass="PetTableViewCell" customModule="PetPasport" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="320"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g4c-sv-9Pn" id="11r-w7-iah">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="320"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYF-ts-dH4">
+                                            <rect key="frame" x="20" y="10" width="350" height="300"/>
+                                            <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="MSc-Z9-yZs">
+                                            <rect key="frame" x="30" y="180" width="330" height="120"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="n29-E5-6j1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="16"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="питомец защищен" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alT-IR-dqQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="16"/>
+                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <progressView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="EMe-ed-16B">
+                                                    <rect key="frame" x="0.0" y="25" width="330" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="dHw-n4-BTP"/>
+                                                    </constraints>
+                                                    <color key="progressTintColor" red="0.45882352941176469" green="1" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="trackTintColor" red="0.5490196078431373" green="0.0" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </progressView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="осталось" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sLF-pz-Eoy">
+                                                    <rect key="frame" x="0.0" y="54" width="330" height="16"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYL-Xm-iRe">
+                                                    <rect key="frame" x="0.0" y="79" width="330" height="16"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLM-ek-2t3">
+                                                    <rect key="frame" x="0.0" y="104" width="330" height="16"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mgi-3T-AwH">
+                                            <rect key="frame" x="30" y="20" width="330" height="150"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Собака" translatesAutoresizingMaskIntoConstraints="NO" id="QO9-a0-xF3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="DiU-JD-ZOD"/>
+                                                        <constraint firstAttribute="width" secondItem="QO9-a0-xF3" secondAttribute="height" multiplier="1:1" id="fPd-Q5-47I"/>
+                                                        <constraint firstAttribute="width" constant="150" id="lPi-ux-u0Q"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="yV5-ng-dS5">
+                                                    <rect key="frame" x="180" y="0.0" width="150" height="150"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кошка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aog-bv-BSA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="54.333333333333336" height="45"/>
+                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Анфиса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcv-Ms-CKx">
+                                                            <rect key="frame" x="0.0" y="35" width="62.666666666666664" height="45"/>
+                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Персидская" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ax-8Y-3Kx">
+                                                            <rect key="frame" x="0.0" y="70" width="91" height="45"/>
+                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FjX-se-ENc">
+                                                            <rect key="frame" x="0.0" y="105" width="113.33333333333333" height="45"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QRy-Ef-p8S">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="113.33333333333333" height="45"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 год" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVd-xK-r95">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="35.666666666666664" height="45"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 месяца" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uom-A0-tzG" userLabel="Pet Mounth">
+                                                                            <rect key="frame" x="45.666666666666664" y="0.0" width="67.666666666666686" height="45"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="hYF-ts-dH4" secondAttribute="bottom" constant="10" id="4vg-nA-5z1"/>
+                                        <constraint firstItem="MSc-Z9-yZs" firstAttribute="height" secondItem="hYF-ts-dH4" secondAttribute="height" multiplier="0.4" id="Ooq-zQ-8bg"/>
+                                        <constraint firstAttribute="trailing" secondItem="hYF-ts-dH4" secondAttribute="trailing" constant="20" id="QXS-uF-Zqv"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="mgi-3T-AwH" secondAttribute="trailing" constant="10" id="WSW-NP-lrs"/>
+                                        <constraint firstItem="hYF-ts-dH4" firstAttribute="top" secondItem="11r-w7-iah" secondAttribute="top" constant="10" id="YRZ-dR-fCx"/>
+                                        <constraint firstItem="hYF-ts-dH4" firstAttribute="leading" secondItem="11r-w7-iah" secondAttribute="leading" constant="20" id="c4k-vU-93f"/>
+                                        <constraint firstItem="mgi-3T-AwH" firstAttribute="top" secondItem="hYF-ts-dH4" secondAttribute="top" constant="10" id="h2f-Tx-wj2"/>
+                                        <constraint firstItem="mgi-3T-AwH" firstAttribute="leading" secondItem="hYF-ts-dH4" secondAttribute="leading" constant="10" id="hTx-Jp-XG6"/>
+                                        <constraint firstItem="MSc-Z9-yZs" firstAttribute="leading" secondItem="hYF-ts-dH4" secondAttribute="leading" constant="10" id="hg5-EC-6cd"/>
+                                        <constraint firstItem="MSc-Z9-yZs" firstAttribute="trailing" secondItem="hYF-ts-dH4" secondAttribute="trailing" constant="-10" id="hzk-bz-dfb"/>
+                                        <constraint firstItem="MSc-Z9-yZs" firstAttribute="bottom" secondItem="hYF-ts-dH4" secondAttribute="bottom" constant="-10" id="lLf-7m-Jba"/>
+                                        <constraint firstItem="MSc-Z9-yZs" firstAttribute="top" secondItem="mgi-3T-AwH" secondAttribute="bottom" constant="10" id="xvQ-9a-2KG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="PetIndicator" destination="EMe-ed-16B" id="e3k-eF-z1G"/>
+                                    <outlet property="containerView" destination="hYF-ts-dH4" id="Akx-A8-VXT"/>
+                                    <outlet property="petBreed" destination="7Ax-8Y-3Kx" id="AC6-Gt-xxW"/>
+                                    <outlet property="petDescriptionParasite" destination="bLM-ek-2t3" id="2pu-fp-AMl"/>
+                                    <outlet property="petDesctiptionBugs" destination="EYL-Xm-iRe" id="PaY-V4-H0M"/>
+                                    <outlet property="petFullAge" destination="vVd-xK-r95" id="rVv-PC-vib"/>
+                                    <outlet property="petFullMounth" destination="uom-A0-tzG" id="5dT-bE-VDm"/>
+                                    <outlet property="petImage" destination="QO9-a0-xF3" id="VLG-sc-Xo7"/>
+                                    <outlet property="petLastTime" destination="sLF-pz-Eoy" id="mWf-yD-rD3"/>
+                                    <outlet property="petName" destination="xcv-Ms-CKx" id="9Iz-Ml-Fuv"/>
+                                    <outlet property="petStatus" destination="alT-IR-dqQ" id="VzI-z3-knI"/>
+                                    <outlet property="petType" destination="Aog-bv-BSA" id="vfr-Cd-WRC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QuU-w8-7Uv" id="f0h-SL-1wm"/>
+                            <outlet property="delegate" destination="QuU-w8-7Uv" id="76d-hA-B9x"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Паспорт питомца" largeTitleDisplayMode="never" id="qyI-Fv-1tA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="oH2-qo-cg8">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="vgY-hQ-2oD" kind="show" identifier="addNewPet" id="urb-dZ-HLV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="ciK-x6-tNk">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                    <connections>
+                        <segue destination="ZaR-zE-UDK" kind="show" identifier="hello" id="lk8-jz-xod"/>
+                        <segue destination="vgY-hQ-2oD" kind="show" identifier="showDetail" id="dmE-WN-YPW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxq-3e-mLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2974" y="293"/>
+        </scene>
+        <!--Show Pet Table View Controller-->
+        <scene sceneID="qw2-fb-MD5">
+            <objects>
+                <viewController id="2fm-hT-dvJ" customClass="ShowPetTableViewController" customModule="PetPasport" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l8y-tl-iQo">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7o-Hi-Lwr">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <connections>
+                                    <segue destination="ecK-6v-eUU" kind="embed" id="TzD-IS-jQ4"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zPw-5V-LSE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zPw-5V-LSE" firstAttribute="trailing" secondItem="J7o-Hi-Lwr" secondAttribute="trailing" id="JDa-X5-jAo"/>
+                            <constraint firstItem="J7o-Hi-Lwr" firstAttribute="top" secondItem="zPw-5V-LSE" secondAttribute="top" id="TEJ-kz-cwZ"/>
+                            <constraint firstItem="J7o-Hi-Lwr" firstAttribute="leading" secondItem="zPw-5V-LSE" secondAttribute="leading" id="V2c-QH-gdr"/>
+                            <constraint firstItem="zPw-5V-LSE" firstAttribute="bottom" secondItem="J7o-Hi-Lwr" secondAttribute="bottom" id="dAI-Q9-a2x"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otC-NA-CxD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="1087"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="oxV-xU-2B0">
+            <objects>
+                <tableViewController id="ecK-6v-eUU" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="b7S-je-hX3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="766"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="K9K-uA-9OW">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="200" id="uev-Lz-VWi">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uev-Lz-VWi" id="Kj4-24-7Ud">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="Txc-Df-j0f">
+                                                    <rect key="frame" x="0.0" y="77.333333969116211" width="414" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="150" id="3fe-7O-jAw">
+                                        <rect key="frame" x="0.0" y="244.66666603088379" width="390" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3fe-7O-jAw" id="cXJ-xf-47X">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ecK-6v-eUU" id="up1-oM-bFk"/>
+                            <outlet property="delegate" destination="ecK-6v-eUU" id="WYB-1r-tSh"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lle-dq-TuK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="1852"/>
+        </scene>
+        <!--Питомец-->
+        <scene sceneID="oTJ-f4-pC9">
+            <objects>
+                <tableViewController id="ZaR-zE-UDK" customClass="ShowPetTableViewController" customModule="PetPasport" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ust-7S-pZR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="ic0-Yp-Fmf">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="250" id="y4t-pe-ZHI">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y4t-pe-ZHI" id="AyL-gg-fBd">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnd-dw-ogX">
+                                                    <rect key="frame" x="30" y="21" width="330" height="208"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qq4-ke-ZGY">
+                                                            <rect key="frame" x="10" y="10" width="310" height="188"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Собака" translatesAutoresizingMaskIntoConstraints="NO" id="6i0-Op-0kT">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="188"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="6i0-Op-0kT" secondAttribute="height" multiplier="1:1" id="E2J-o1-IUb"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9uV-ft-grQ">
+                                                                    <rect key="frame" x="160" y="0.0" width="150" height="188"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кошка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhB-le-MC5">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="54.333333333333336" height="33.666666666666664"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Анфиса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCg-E7-5A9">
+                                                                            <rect key="frame" x="0.0" y="38.666666666666671" width="62.666666666666664" height="33.666666666666671"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Персидская" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyL-Et-igZ">
+                                                                            <rect key="frame" x="0.0" y="77.333333333333329" width="91" height="33.333333333333329"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EjQ-6U-NjK">
+                                                                            <rect key="frame" x="0.0" y="115.66666666666667" width="35.666666666666664" height="33.666666666666671"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QAl-28-hUf">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="35.666666666666664" height="33.666666666666664"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 год" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zf-IF-Zgc">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="35.666666666666664" height="33.666666666666664"/>
+                                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhz-Rt-1zf">
+                                                                            <rect key="frame" x="0.0" y="154.33333333333334" width="100" height="33.666666666666657"/>
+                                                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="30" id="6tY-C5-DmN"/>
+                                                                                <constraint firstAttribute="width" constant="100" id="RqU-cT-MXA"/>
+                                                                            </constraints>
+                                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <state key="normal" title="Календарь">
+                                                                                <color key="titleColor" systemColor="labelColor"/>
+                                                                            </state>
+                                                                            <connections>
+                                                                                <action selector="pushButtonCalendar:" destination="ZaR-zE-UDK" eventType="touchUpInside" id="6lp-K7-FDD"/>
+                                                                                <segue destination="7Bd-DI-eAg" kind="showDetail" identifier="showCalendar" id="f8B-7P-dcy"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.94117647058823528" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Qq4-ke-ZGY" secondAttribute="bottom" constant="10" id="Gqw-6x-gMQ"/>
+                                                        <constraint firstItem="Qq4-ke-ZGY" firstAttribute="top" secondItem="jnd-dw-ogX" secondAttribute="top" constant="10" id="OOo-6U-RI5"/>
+                                                        <constraint firstItem="Qq4-ke-ZGY" firstAttribute="leading" secondItem="jnd-dw-ogX" secondAttribute="leading" constant="10" id="S4J-bq-O3R"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Qq4-ke-ZGY" secondAttribute="trailing" constant="10" id="wdn-cv-tXo"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="jnd-dw-ogX" firstAttribute="top" secondItem="AyL-gg-fBd" secondAttribute="topMargin" constant="10" id="68V-IU-VEs"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="jnd-dw-ogX" secondAttribute="bottom" constant="10" id="blD-Bl-PFV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jnd-dw-ogX" secondAttribute="trailing" constant="10" id="gCl-sU-oUv"/>
+                                                <constraint firstItem="jnd-dw-ogX" firstAttribute="leading" secondItem="AyL-gg-fBd" secondAttribute="leadingMargin" constant="10" id="oa0-kQ-ceS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="190" id="xWP-YF-LyK">
+                                        <rect key="frame" x="0.0" y="294.66666603088379" width="390" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xWP-YF-LyK" id="yAv-VL-fOH">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4x-7p-z9V">
+                                                    <rect key="frame" x="20" y="10" width="350" height="170"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="27V-NH-pmG">
+                                                            <rect key="frame" x="10" y="10" width="330" height="150"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KeD-6p-Jc4">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Состояние защиты прививки" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPP-zL-FJ5">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1i7-Rg-0N0">
+                                                                            <rect key="frame" x="260" y="0.0" width="70" height="30"/>
+                                                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="70" id="DSb-Im-yi8"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <state key="normal" title="справка">
+                                                                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </state>
+                                                                            <connections>
+                                                                                <segue destination="hDA-Nk-qSa" kind="showDetail" identifier="vaction" id="ilM-j1-258"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="30" id="rtS-qQ-qZR"/>
+                                                                    </constraints>
+                                                                </stackView>
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sCp-g0-qZn">
+                                                                    <rect key="frame" x="0.0" y="40" width="330" height="30"/>
+                                                                    <color key="backgroundColor" red="1" green="0.91273421060000004" blue="0.85195727359999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="30" id="4Tq-p1-pls"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pHR-Qi-aSG">
+                                                                    <rect key="frame" x="0.0" y="80" width="330" height="31"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="20" id="KgI-h7-2aq"/>
+                                                                    </constraints>
+                                                                    <color key="progressTintColor" red="0.45882352941176469" green="1" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="trackTintColor" red="0.5490196078431373" green="0.0" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </progressView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FMS-mS-h0r">
+                                                                    <rect key="frame" x="0.0" y="120" width="330" height="30"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="дня" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFc-XC-F7u">
+                                                                            <rect key="frame" x="0.0" y="5" width="330" height="20"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="30" id="2fM-FQ-5lm"/>
+                                                                    </constraints>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="sCp-g0-qZn" firstAttribute="top" secondItem="KeD-6p-Jc4" secondAttribute="bottom" constant="10" id="67O-i5-IIg"/>
+                                                                <constraint firstItem="FMS-mS-h0r" firstAttribute="top" secondItem="pHR-Qi-aSG" secondAttribute="bottom" constant="10" id="LWT-Iq-lBl"/>
+                                                                <constraint firstItem="pHR-Qi-aSG" firstAttribute="top" secondItem="sCp-g0-qZn" secondAttribute="bottom" constant="10" id="Lj7-09-uDh"/>
+                                                                <constraint firstAttribute="bottom" secondItem="FMS-mS-h0r" secondAttribute="bottom" id="YVU-9V-qGj"/>
+                                                                <constraint firstItem="KeD-6p-Jc4" firstAttribute="top" secondItem="27V-NH-pmG" secondAttribute="top" id="aY0-eR-BIb"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.94117647058823528" blue="0.80000000000000004" alpha="0.79738278419999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="27V-NH-pmG" secondAttribute="trailing" constant="10" id="1xu-B6-YOV"/>
+                                                        <constraint firstItem="27V-NH-pmG" firstAttribute="leading" secondItem="G4x-7p-z9V" secondAttribute="leading" constant="10" id="Lkm-iI-o5T"/>
+                                                        <constraint firstItem="27V-NH-pmG" firstAttribute="top" secondItem="G4x-7p-z9V" secondAttribute="top" constant="10" id="SSj-wX-iYU"/>
+                                                        <constraint firstAttribute="bottom" secondItem="27V-NH-pmG" secondAttribute="bottom" constant="10" id="WMf-N2-aex"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="G4x-7p-z9V" firstAttribute="top" secondItem="yAv-VL-fOH" secondAttribute="top" constant="10" id="D62-N4-A8R"/>
+                                                <constraint firstAttribute="trailing" secondItem="G4x-7p-z9V" secondAttribute="trailing" constant="20" id="S97-yI-zYc"/>
+                                                <constraint firstAttribute="bottom" secondItem="G4x-7p-z9V" secondAttribute="bottom" constant="10" id="lKp-ya-DMF"/>
+                                                <constraint firstItem="G4x-7p-z9V" firstAttribute="leading" secondItem="yAv-VL-fOH" secondAttribute="leading" constant="20" id="usi-9s-PKd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="190" id="xKw-FE-iXj">
+                                        <rect key="frame" x="0.0" y="484.66666603088379" width="390" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xKw-FE-iXj" id="S6L-Ib-Nd6">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8t1-Z2-f7w">
+                                                    <rect key="frame" x="20" y="10" width="350" height="170"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RlW-ma-Euy">
+                                                            <rect key="frame" x="10" y="10" width="330" height="150"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWD-Wt-QP7">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Состояние защиты от глистов" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayz-3k-AaX">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L12-HZ-lcg">
+                                                                            <rect key="frame" x="260" y="0.0" width="70" height="30"/>
+                                                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="30" id="Mbz-xH-mLO"/>
+                                                                                <constraint firstAttribute="width" constant="70" id="p6E-PF-t2a"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <state key="normal" title="справка">
+                                                                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </state>
+                                                                            <connections>
+                                                                                <segue destination="hDA-Nk-qSa" kind="showDetail" identifier="parasite" id="4XE-jA-au2"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rj7-Un-9be">
+                                                                    <rect key="frame" x="0.0" y="40" width="330" height="30"/>
+                                                                    <color key="backgroundColor" red="1" green="0.91273421060000004" blue="0.85195727359999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="x90-Ql-4mP">
+                                                                    <rect key="frame" x="0.0" y="80" width="330" height="31"/>
+                                                                    <color key="progressTintColor" red="0.45882352939999999" green="1" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="trackTintColor" red="0.54901960780000003" green="0.0" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </progressView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oSS-nL-3fF">
+                                                                    <rect key="frame" x="0.0" y="120" width="330" height="30"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="дня" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ji9-6y-5On">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.94117647058823528" blue="0.80000000000000004" alpha="0.79738278419999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstItem="RlW-ma-Euy" firstAttribute="leading" secondItem="8t1-Z2-f7w" secondAttribute="leading" constant="10" id="Bxt-0R-8a6"/>
+                                                        <constraint firstItem="RlW-ma-Euy" firstAttribute="top" secondItem="8t1-Z2-f7w" secondAttribute="top" constant="10" id="FLk-vv-GPk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="RlW-ma-Euy" secondAttribute="trailing" constant="10" id="wOC-nV-2CE"/>
+                                                        <constraint firstAttribute="bottom" secondItem="RlW-ma-Euy" secondAttribute="bottom" constant="10" id="zFc-6v-vvT"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="8t1-Z2-f7w" secondAttribute="bottom" constant="10" id="GWY-LF-dEp"/>
+                                                <constraint firstAttribute="trailing" secondItem="8t1-Z2-f7w" secondAttribute="trailing" constant="20" id="VQv-62-vTd"/>
+                                                <constraint firstItem="8t1-Z2-f7w" firstAttribute="leading" secondItem="S6L-Ib-Nd6" secondAttribute="leading" constant="20" id="XhO-Nz-dyY"/>
+                                                <constraint firstItem="8t1-Z2-f7w" firstAttribute="top" secondItem="S6L-Ib-Nd6" secondAttribute="top" constant="10" id="cCy-vp-ZU0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="190" id="8Jb-WS-FAI">
+                                        <rect key="frame" x="0.0" y="674.66666603088379" width="390" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Jb-WS-FAI" id="8ay-Ul-irr">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNS-dz-4vV">
+                                                    <rect key="frame" x="20" y="10" width="350" height="170"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7PW-dG-CHb">
+                                                            <rect key="frame" x="10" y="10" width="330" height="150"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FbY-1N-a44">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Состояние защиты от блох" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulf-9j-SSw">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yef-Rs-wBt">
+                                                                            <rect key="frame" x="260" y="0.0" width="70" height="30"/>
+                                                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="70" id="hsx-6U-Z0K"/>
+                                                                                <constraint firstAttribute="height" constant="30" id="zYs-Dp-d8x"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <state key="normal" title="справка">
+                                                                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            </state>
+                                                                            <connections>
+                                                                                <segue destination="hDA-Nk-qSa" kind="showDetail" identifier="bugs" id="zLQ-8J-0GK"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVO-5a-qx5">
+                                                                    <rect key="frame" x="0.0" y="40" width="330" height="30"/>
+                                                                    <color key="backgroundColor" red="1" green="0.91273421060000004" blue="0.85195727359999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                    <textInputTraits key="textInputTraits"/>
+                                                                </textField>
+                                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3dp-gC-XNz">
+                                                                    <rect key="frame" x="0.0" y="80" width="330" height="31"/>
+                                                                    <color key="progressTintColor" red="0.45882352939999999" green="1" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="trackTintColor" red="0.54901960780000003" green="0.0" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </progressView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="j0q-mh-dwF">
+                                                                    <rect key="frame" x="0.0" y="120" width="330" height="30"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="дня" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jge-g1-iZL">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="vh9-AE-s1d"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.94117647058823528" blue="0.80000000000000004" alpha="0.79738278419999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="7PW-dG-CHb" secondAttribute="trailing" constant="10" id="19w-HB-STU"/>
+                                                        <constraint firstItem="7PW-dG-CHb" firstAttribute="top" secondItem="BNS-dz-4vV" secondAttribute="top" constant="10" id="4WG-LI-FcX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="7PW-dG-CHb" secondAttribute="bottom" constant="10" id="r2g-LH-pp7"/>
+                                                        <constraint firstItem="7PW-dG-CHb" firstAttribute="leading" secondItem="BNS-dz-4vV" secondAttribute="leading" constant="10" id="vOI-zS-gq1"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BNS-dz-4vV" firstAttribute="top" secondItem="8ay-Ul-irr" secondAttribute="top" constant="10" id="0KH-xh-E1B"/>
+                                                <constraint firstItem="BNS-dz-4vV" firstAttribute="leading" secondItem="8ay-Ul-irr" secondAttribute="leading" constant="20" id="7dU-SV-TDF"/>
+                                                <constraint firstAttribute="trailing" secondItem="BNS-dz-4vV" secondAttribute="trailing" constant="20" id="ObF-jc-rob"/>
+                                                <constraint firstAttribute="bottom" secondItem="BNS-dz-4vV" secondAttribute="bottom" constant="10" id="oB1-uE-vWh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ZaR-zE-UDK" id="ekB-i8-xGw"/>
+                            <outlet property="delegate" destination="ZaR-zE-UDK" id="59m-B5-098"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Питомец" largeTitleDisplayMode="never" id="CPO-8J-8ss"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="CatDogLabel" destination="HhB-le-MC5" id="s5t-9H-3id"/>
+                        <outlet property="breedLabel" destination="MyL-Et-igZ" id="LJA-pS-T1Z"/>
+                        <outlet property="bugsButton" destination="yef-Rs-wBt" id="c6b-ke-6Ou"/>
+                        <outlet property="bugsLastDays" destination="jge-g1-iZL" id="LGn-75-dnM"/>
+                        <outlet property="bugsTF" destination="AVO-5a-qx5" id="Z8e-wa-TmM"/>
+                        <outlet property="buttonVaction" destination="1i7-Rg-0N0" id="PpV-wn-CK7"/>
+                        <outlet property="calendarButton" destination="vhz-Rt-1zf" id="yr8-I7-MAv"/>
+                        <outlet property="cell1View" destination="jnd-dw-ogX" id="QyV-qe-5JG"/>
+                        <outlet property="cell2View" destination="G4x-7p-z9V" id="iOF-qH-qYf"/>
+                        <outlet property="cell3View" destination="8t1-Z2-f7w" id="CEB-J0-p7m"/>
+                        <outlet property="cell4View" destination="BNS-dz-4vV" id="xYZ-yR-bKy"/>
+                        <outlet property="nameLabel" destination="eCg-E7-5A9" id="0E9-4i-7BF"/>
+                        <outlet property="parasiteButton" destination="L12-HZ-lcg" id="1pR-AS-4dj"/>
+                        <outlet property="parasiteLastDays" destination="Ji9-6y-5On" id="W8P-qi-79C"/>
+                        <outlet property="parasiteTF" destination="rj7-Un-9be" id="j5Z-RN-wMO"/>
+                        <outlet property="petFullAgeLabel" destination="9zf-IF-Zgc" id="1Qb-jT-CFy"/>
+                        <outlet property="petImage" destination="6i0-Op-0kT" id="FJd-V0-UNF"/>
+                        <outlet property="progressOfBugs" destination="3dp-gC-XNz" id="w0n-is-tHO"/>
+                        <outlet property="progressOfParasite" destination="x90-Ql-4mP" id="F8X-03-KhC"/>
+                        <outlet property="progressOfVaction" destination="pHR-Qi-aSG" id="LdJ-3s-3Xo"/>
+                        <outlet property="vactionLastDays" destination="WFc-XC-F7u" id="GSJ-y5-4yc"/>
+                        <outlet property="vactionTF" destination="sCp-g0-qZn" id="cDM-DE-gYG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dyv-Gm-PR5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2973.913043478261" y="1069.5652173913045"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="CyD-FC-GpE">
+            <objects>
+                <viewController id="hDA-Nk-qSa" userLabel="Info" customClass="InfoViewController" customModule="PetPasport" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tAc-i3-fcv">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHT-Rv-0Mj">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
+                                <color key="backgroundColor" red="0.94880586860000005" green="0.94958204030000004" blue="0.91372179990000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ara-hR-qNs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ara-hR-qNs" firstAttribute="trailing" secondItem="oHT-Rv-0Mj" secondAttribute="trailing" id="Zn1-4q-CMc"/>
+                            <constraint firstItem="ara-hR-qNs" firstAttribute="bottom" secondItem="oHT-Rv-0Mj" secondAttribute="bottom" id="ls0-UT-rb9"/>
+                            <constraint firstItem="oHT-Rv-0Mj" firstAttribute="top" secondItem="ara-hR-qNs" secondAttribute="top" id="sAU-a8-jyL"/>
+                            <constraint firstItem="oHT-Rv-0Mj" firstAttribute="leading" secondItem="ara-hR-qNs" secondAttribute="leading" id="yel-46-kQM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Информация" id="DaE-mL-sE5"/>
+                    <connections>
+                        <outlet property="infoWebView" destination="oHT-Rv-0Mj" id="Y2g-jE-zFe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0o-d0-04S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5235" y="1070"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="ZRc-zp-7ef">
+            <objects>
+                <viewController id="7Bd-DI-eAg" customClass="CalendarViewController" customModule="PetPasport" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZmF-ih-vr6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="702"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wTo-Wm-HG9" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="702"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                        <color key="value" systemColor="systemYellowColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todaySelectionColor">
+                                        <color key="value" systemColor="systemYellowColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Bd-DI-eAg" id="T5m-zw-Ivs"/>
+                                    <outlet property="delegate" destination="7Bd-DI-eAg" id="omR-ir-G14"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hbn-S4-d0h"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wTo-Wm-HG9" firstAttribute="top" secondItem="Hbn-S4-d0h" secondAttribute="top" id="1C3-z0-Rae"/>
+                            <constraint firstItem="wTo-Wm-HG9" firstAttribute="trailing" secondItem="Hbn-S4-d0h" secondAttribute="trailing" id="IvJ-Mh-mZY"/>
+                            <constraint firstItem="wTo-Wm-HG9" firstAttribute="bottom" secondItem="Hbn-S4-d0h" secondAttribute="bottom" id="Qwe-Zq-y7C"/>
+                            <constraint firstItem="wTo-Wm-HG9" firstAttribute="top" secondItem="Hbn-S4-d0h" secondAttribute="top" id="XIn-rZ-rsa"/>
+                            <constraint firstItem="wTo-Wm-HG9" firstAttribute="leading" secondItem="Hbn-S4-d0h" secondAttribute="leading" id="YkE-tZ-daC"/>
+                            <constraint firstItem="wTo-Wm-HG9" firstAttribute="leading" secondItem="Hbn-S4-d0h" secondAttribute="leading" id="cA2-uT-7aR"/>
+                            <constraint firstItem="Hbn-S4-d0h" firstAttribute="bottom" secondItem="wTo-Wm-HG9" secondAttribute="bottom" id="e3U-kM-NPQ"/>
+                            <constraint firstItem="Hbn-S4-d0h" firstAttribute="trailing" secondItem="wTo-Wm-HG9" secondAttribute="trailing" id="ug3-PM-7CO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ddo-0u-nJr">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="wYa-zo-bfy">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="EjO-lU-dIy">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Сохранить">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <color key="titleShadowColor" red="0.60624610050000005" green="0.17775852080000001" blue="0.13551930109999999" alpha="0.49946523500000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="calendar" destination="wTo-Wm-HG9" id="zgU-SL-1LN"/>
+                        <segue destination="U1k-lD-IFC" kind="unwind" identifier="saveCalendar" unwindAction="unwindSegueZaebala:" id="pzf-Ny-VhN"/>
+                        <segue destination="U1k-lD-IFC" kind="unwind" identifier="saveCalendar" unwindAction="unwindSegue:" id="YE3-eZ-D8d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PP0-49-Xdl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="U1k-lD-IFC" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4090" y="656"/>
+        </scene>
+        <!--Добавление питомца-->
+        <scene sceneID="s6n-rx-ETA">
+            <objects>
+                <viewController id="vgY-hQ-2oD" customClass="AddPetViewController" customModule="PetPasport" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9af-Pi-we4">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TracesPNG" translatesAutoresizingMaskIntoConstraints="NO" id="1T7-5W-PuT">
+                                <rect key="frame" x="190" y="610" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="PES-hG-L2o"/>
+                                    <constraint firstAttribute="width" constant="200" id="Rgd-qb-OTU"/>
+                                </constraints>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Alq-l3-pQc">
+                                <rect key="frame" x="0.0" y="88" width="390" height="756"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="yZS-1g-nxD" kind="embed" id="SQg-rD-kCV"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CHh-hQ-DLC"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Alq-l3-pQc" secondAttribute="bottom" id="EpE-a6-7lc"/>
+                            <constraint firstItem="Alq-l3-pQc" firstAttribute="trailing" secondItem="CHh-hQ-DLC" secondAttribute="trailing" id="Jv3-xf-voN"/>
+                            <constraint firstItem="CHh-hQ-DLC" firstAttribute="trailing" secondItem="1T7-5W-PuT" secondAttribute="trailing" id="Mk1-vk-UFj"/>
+                            <constraint firstItem="CHh-hQ-DLC" firstAttribute="bottom" secondItem="1T7-5W-PuT" secondAttribute="bottom" id="NWx-xR-SVV"/>
+                            <constraint firstItem="Alq-l3-pQc" firstAttribute="top" secondItem="CHh-hQ-DLC" secondAttribute="top" id="Uhg-0U-Xgg"/>
+                            <constraint firstItem="Alq-l3-pQc" firstAttribute="leading" secondItem="CHh-hQ-DLC" secondAttribute="leading" id="euB-9l-Xuj"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Добавление питомца" id="8IY-fD-5hy">
+                        <barButtonItem key="leftBarButtonItem" title="Отмена" style="done" id="D3l-0e-KYX">
+                            <color key="tintColor" red="0.46590168329999998" green="0.31512214710000003" blue="0.18628354380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="vgY-hQ-2oD" id="QVu-QA-Qnq"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Сохр." style="done" id="g14-Gb-PR3">
+                            <color key="tintColor" red="0.46590168329999998" green="0.31512214710000003" blue="0.18628354380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="vgY-hQ-2oD" id="cWs-3D-viz"/>
+                                <segue destination="CJ8-p9-zdD" kind="unwind" unwindAction="unwindSegue:" id="g68-et-7Ll"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="D3l-0e-KYX" id="M2z-dA-CIU"/>
+                        <outlet property="saveButton" destination="g14-Gb-PR3" id="Axr-dI-gEm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g24-jp-L2m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="CJ8-p9-zdD" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4090" y="-82"/>
+        </scene>
+        <!--Add Pet Table View Controller-->
+        <scene sceneID="Giq-Lr-Cbw">
+            <objects>
+                <tableViewController id="yZS-1g-nxD" customClass="AddPetTableViewController" customModule="PetPasport" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" id="6mT-7s-uGM">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="kjx-gt-2xs">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="200" id="MU7-RS-P3M">
+                                        <rect key="frame" x="0.0" y="18" width="390" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MU7-RS-P3M" id="aIw-7n-CYW">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3m8-K5-elj">
+                                                    <rect key="frame" x="40" y="21" width="310" height="158"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jjk-DN-oSf">
+                                                            <rect key="frame" x="0.0" y="10" width="310" height="138"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нажмите для выбора изображения" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="suH-9f-WfB">
+                                                                    <rect key="frame" x="14.333333333333343" y="0.0" width="281.33333333333326" height="33"/>
+                                                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="b2r-Pk-LEz">
+                                                                    <rect key="frame" x="80" y="38" width="150" height="100"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="100" id="M4A-kh-2ux"/>
+                                                                        <constraint firstAttribute="width" constant="150" id="sAy-Aj-lfg"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.94117647058823528" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Jjk-DN-oSf" firstAttribute="top" secondItem="3m8-K5-elj" secondAttribute="top" constant="10" id="9rW-mb-8HY"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Jjk-DN-oSf" secondAttribute="trailing" id="HxP-z8-oF6"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Jjk-DN-oSf" secondAttribute="bottom" constant="10" id="jfB-2s-ryT"/>
+                                                        <constraint firstItem="Jjk-DN-oSf" firstAttribute="leading" secondItem="3m8-K5-elj" secondAttribute="leading" id="mHV-r7-oYO"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="3m8-K5-elj" secondAttribute="trailing" constant="20" id="35v-Rq-gX3"/>
+                                                <constraint firstItem="3m8-K5-elj" firstAttribute="leading" secondItem="aIw-7n-CYW" secondAttribute="leadingMargin" constant="20" id="GaU-h8-gAI"/>
+                                                <constraint firstItem="3m8-K5-elj" firstAttribute="top" secondItem="aIw-7n-CYW" secondAttribute="topMargin" constant="10" id="PW4-By-twR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3m8-K5-elj" secondAttribute="bottom" constant="10" id="wsP-vU-8Nt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="240" id="D1G-vB-UaE">
+                                        <rect key="frame" x="0.0" y="218" width="390" height="240"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D1G-vB-UaE" id="Cxs-0J-3dc">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="240"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYZ-YW-dRb">
+                                                    <rect key="frame" x="20" y="20" width="350" height="200"/>
+                                                    <color key="backgroundColor" red="1" green="0.94206399269999996" blue="0.79895674989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hli-wB-vce">
+                                                    <rect key="frame" x="30" y="30" width="330" height="180"/>
+                                                    <subviews>
+                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите питомца:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcc-Ak-40j">
+                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="20"/>
+                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="dVH-q1-dqn">
+                                                            <rect key="frame" x="0.0" y="30" width="330" height="31"/>
+                                                            <color key="backgroundColor" red="1" green="0.81960784313725488" blue="0.49411764705882355" alpha="0.55629139072847678" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="6TU-6y-pbK"/>
+                                                            </constraints>
+                                                            <segments>
+                                                                <segment title="Кошка"/>
+                                                                <segment title="Собака"/>
+                                                            </segments>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
+                                                            <connections>
+                                                                <action selector="SelectPetType:" destination="yZS-1g-nxD" eventType="valueChanged" id="kD0-gM-PIV"/>
+                                                            </connections>
+                                                        </segmentedControl>
+                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="xgY-KE-7dw">
+                                                            <rect key="frame" x="0.0" y="70" width="330" height="31"/>
+                                                            <color key="backgroundColor" red="1" green="0.81960784313725488" blue="0.49411764705882355" alpha="0.5562913907" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="fo0-bh-aOj"/>
+                                                            </constraints>
+                                                            <segments>
+                                                                <segment title="Мальчик"/>
+                                                                <segment title="Девочка"/>
+                                                            </segments>
+                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                            <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
+                                                            <connections>
+                                                                <action selector="SelectPetGender:" destination="yZS-1g-nxD" eventType="valueChanged" id="ogl-Ux-Bk1"/>
+                                                            </connections>
+                                                        </segmentedControl>
+                                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Кошка, собака" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBy-ZE-5eO">
+                                                            <rect key="frame" x="0.0" y="110" width="330" height="30"/>
+                                                            <color key="backgroundColor" red="1" green="0.81960784313725488" blue="0.49411764705882355" alpha="0.79738278419999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="1Dj-g7-nZ3"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                                        </textField>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="c7k-ld-i1Y">
+                                                            <rect key="frame" x="0.0" y="150" width="330" height="30"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Календарь течки:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqw-7e-WhR">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="230" height="30"/>
+                                                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW9-tR-hbF">
+                                                                    <rect key="frame" x="230" y="0.0" width="100" height="30"/>
+                                                                    <color key="backgroundColor" red="1" green="0.81960784310000001" blue="0.4941176471" alpha="0.79738278419999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="30" id="992-No-cfx"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="CKr-hH-PhF"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                    <state key="normal" title="Календарь">
+                                                                        <color key="titleColor" systemColor="labelColor"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <segue destination="7Bd-DI-eAg" kind="showDetail" identifier="setCalendar" id="BVZ-Ce-Wie"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="Wqw-7e-WhR" secondAttribute="bottom" id="3TC-9g-L6W"/>
+                                                                <constraint firstItem="Wqw-7e-WhR" firstAttribute="leading" secondItem="c7k-ld-i1Y" secondAttribute="leading" id="jXY-4O-3gc"/>
+                                                                <constraint firstItem="Wqw-7e-WhR" firstAttribute="top" secondItem="c7k-ld-i1Y" secondAttribute="top" id="sQz-LV-L17"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Hli-wB-vce" firstAttribute="trailing" secondItem="zYZ-YW-dRb" secondAttribute="trailing" constant="-10" id="TKw-9f-4LK"/>
+                                                <constraint firstItem="Hli-wB-vce" firstAttribute="top" secondItem="zYZ-YW-dRb" secondAttribute="top" constant="10" id="U4g-zT-Sbm"/>
+                                                <constraint firstItem="zYZ-YW-dRb" firstAttribute="leading" secondItem="Cxs-0J-3dc" secondAttribute="leading" constant="20" id="V0K-Wh-8zQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="zYZ-YW-dRb" secondAttribute="trailing" constant="20" id="Yql-Oq-mfV"/>
+                                                <constraint firstItem="zYZ-YW-dRb" firstAttribute="top" secondItem="Cxs-0J-3dc" secondAttribute="top" constant="20" id="in1-G8-QaE"/>
+                                                <constraint firstAttribute="bottom" secondItem="zYZ-YW-dRb" secondAttribute="bottom" constant="20" id="mGS-mX-gra"/>
+                                                <constraint firstItem="Hli-wB-vce" firstAttribute="leading" secondItem="zYZ-YW-dRb" secondAttribute="leading" constant="10" id="pbT-zC-hyf"/>
+                                                <constraint firstItem="Hli-wB-vce" firstAttribute="bottom" secondItem="zYZ-YW-dRb" secondAttribute="bottom" constant="-10" id="uQS-JN-UIX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="260" id="aPj-yz-bKG">
+                                        <rect key="frame" x="0.0" y="458" width="390" height="260"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aPj-yz-bKG" id="EsM-mp-Lbh">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="260"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P1M-4a-oIP">
+                                                    <rect key="frame" x="20" y="20" width="350" height="220"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v6o-4A-0vG">
+                                                            <rect key="frame" x="10" y="10" width="330" height="200"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Zrq-VA-rUN">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="60"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кличка питомца?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2v-Bh-FhL">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Мурка" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tsg-1o-kMX">
+                                                                            <rect key="frame" x="0.0" y="30" width="330" height="30"/>
+                                                                            <color key="backgroundColor" red="0.8901960784313725" green="0.68627450980392157" blue="0.47058823529411764" alpha="0.70999999999999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="30" id="BBD-RU-QTv"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WN8-ZD-j1r">
+                                                                    <rect key="frame" x="0.0" y="70" width="330" height="60"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какая порода животного? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpM-0B-4wq">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Персидская" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBP-S2-6Ji">
+                                                                            <rect key="frame" x="0.0" y="30" width="330" height="30"/>
+                                                                            <color key="backgroundColor" red="0.8901960784313725" green="0.68627450980392157" blue="0.47058823529411764" alpha="0.79738278419999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="30" id="Yep-rK-Tbe"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZwS-mz-1gR">
+                                                                    <rect key="frame" x="0.0" y="140" width="330" height="60"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата рождения питомца?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmN-4N-vNK">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="11.12.2013" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXT-Mp-q1Z">
+                                                                            <rect key="frame" x="0.0" y="30" width="330" height="30"/>
+                                                                            <color key="backgroundColor" red="0.89047672769999997" green="0.68588506559999995" blue="0.4714267043" alpha="0.71115708509999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="30" id="RYc-PW-CsD"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.94206399269999996" blue="0.79895674989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="v6o-4A-0vG" secondAttribute="trailing" constant="10" id="2bF-2g-HS8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="v6o-4A-0vG" secondAttribute="bottom" constant="10" id="acV-J8-mGX"/>
+                                                        <constraint firstItem="v6o-4A-0vG" firstAttribute="leading" secondItem="P1M-4a-oIP" secondAttribute="leading" constant="10" id="m9F-v1-guc"/>
+                                                        <constraint firstItem="v6o-4A-0vG" firstAttribute="top" secondItem="P1M-4a-oIP" secondAttribute="top" constant="10" id="uqp-0z-6aY"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="P1M-4a-oIP" firstAttribute="top" secondItem="EsM-mp-Lbh" secondAttribute="top" constant="20" id="6fd-EP-gSR"/>
+                                                <constraint firstAttribute="trailing" secondItem="P1M-4a-oIP" secondAttribute="trailing" constant="20" id="GJL-lA-aaZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="P1M-4a-oIP" secondAttribute="bottom" constant="20" id="ZfW-hq-yLz"/>
+                                                <constraint firstItem="P1M-4a-oIP" firstAttribute="leading" secondItem="EsM-mp-Lbh" secondAttribute="leading" constant="20" id="g63-JY-mTe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="190" id="Xd6-Ra-NmO">
+                                        <rect key="frame" x="0.0" y="718" width="390" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xd6-Ra-NmO" id="5Gb-Zs-9ik">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OrN-W2-rko">
+                                                    <rect key="frame" x="20" y="20" width="350" height="150"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w4q-wY-mEc">
+                                                            <rect key="frame" x="10" y="10" width="330" height="130"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Cd4-HS-AVq">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="60"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Дата последней вакцинации?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPh-vm-N60">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="01.02.2022" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vmc-GT-8Wg">
+                                                                            <rect key="frame" x="0.0" y="30" width="330" height="30"/>
+                                                                            <color key="backgroundColor" red="1" green="0.81960784313725488" blue="0.49411764705882355" alpha="0.79738278419999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="30" id="H4n-Mp-Oif"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ITB-gj-pb7">
+                                                                    <rect key="frame" x="0.0" y="70" width="330" height="60"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Дата повторной вакцинации?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjn-MA-fbx">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="01.08.2022" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZG-UL-N43">
+                                                                            <rect key="frame" x="0.0" y="30" width="330" height="30"/>
+                                                                            <color key="backgroundColor" red="1" green="0.82104686469999999" blue="0.49368229990000001" alpha="0.79738278419999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="30" id="X5w-zf-zuS"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.94206399269999996" blue="0.79895674989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstItem="w4q-wY-mEc" firstAttribute="top" secondItem="OrN-W2-rko" secondAttribute="top" constant="10" id="Ezu-ag-ZQt"/>
+                                                        <constraint firstItem="w4q-wY-mEc" firstAttribute="leading" secondItem="OrN-W2-rko" secondAttribute="leading" constant="10" id="cvh-wI-ZbQ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="w4q-wY-mEc" secondAttribute="bottom" constant="10" id="uox-9G-LPm"/>
+                                                        <constraint firstAttribute="trailing" secondItem="w4q-wY-mEc" secondAttribute="trailing" constant="10" id="x5m-Ce-vey"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="OrN-W2-rko" secondAttribute="bottom" constant="20" id="DKd-Kg-msc"/>
+                                                <constraint firstItem="OrN-W2-rko" firstAttribute="top" secondItem="5Gb-Zs-9ik" secondAttribute="top" constant="20" id="I2u-n9-kZ3"/>
+                                                <constraint firstAttribute="trailing" secondItem="OrN-W2-rko" secondAttribute="trailing" constant="20" id="Jvc-x4-UFn"/>
+                                                <constraint firstItem="OrN-W2-rko" firstAttribute="leading" secondItem="5Gb-Zs-9ik" secondAttribute="leading" constant="20" id="qCV-bL-ObJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="190" id="gy6-4G-8Yn">
+                                        <rect key="frame" x="0.0" y="908" width="390" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gy6-4G-8Yn" id="jlC-qd-o7K">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEz-uQ-OLM">
+                                                    <rect key="frame" x="20" y="20" width="350" height="150"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S8L-K2-jeW">
+                                                            <rect key="frame" x="10" y="10" width="330" height="130"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IcZ-nA-DSR">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="60"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Дата последней глистогонки?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF3-BF-Wz6">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="01.02.2022" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W4q-83-UTl">
+                                                                            <rect key="frame" x="0.0" y="30" width="330" height="30"/>
+                                                                            <color key="backgroundColor" red="0.89047672769999997" green="0.68588506559999995" blue="0.4714267043" alpha="0.71115708509999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="30" id="bVg-d4-Y7p"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tCW-SH-hxW">
+                                                                    <rect key="frame" x="0.0" y="70" width="330" height="60"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Дата повторной глистогонки?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkX-tw-adV">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="01.08.2022" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2oU-9C-MBb">
+                                                                            <rect key="frame" x="0.0" y="30" width="330" height="30"/>
+                                                                            <color key="backgroundColor" red="0.89047672769999997" green="0.68588506559999995" blue="0.4714267043" alpha="0.71115708509999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="30" id="Vb5-KT-4ql"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.94206399269999996" blue="0.79895674989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstItem="S8L-K2-jeW" firstAttribute="top" secondItem="wEz-uQ-OLM" secondAttribute="top" constant="10" id="5f9-fi-7Ca"/>
+                                                        <constraint firstItem="S8L-K2-jeW" firstAttribute="leading" secondItem="wEz-uQ-OLM" secondAttribute="leading" constant="10" id="WJU-lc-K7G"/>
+                                                        <constraint firstAttribute="trailing" secondItem="S8L-K2-jeW" secondAttribute="trailing" constant="10" id="jd4-H6-iHR"/>
+                                                        <constraint firstAttribute="bottom" secondItem="S8L-K2-jeW" secondAttribute="bottom" constant="10" id="vuK-4C-Sfj"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wEz-uQ-OLM" firstAttribute="top" secondItem="jlC-qd-o7K" secondAttribute="top" constant="20" id="F04-br-9OB"/>
+                                                <constraint firstItem="wEz-uQ-OLM" firstAttribute="leading" secondItem="jlC-qd-o7K" secondAttribute="leading" constant="20" id="P8x-jl-dde"/>
+                                                <constraint firstAttribute="bottom" secondItem="wEz-uQ-OLM" secondAttribute="bottom" constant="20" id="RoI-ho-h2w"/>
+                                                <constraint firstAttribute="trailing" secondItem="wEz-uQ-OLM" secondAttribute="trailing" constant="20" id="fc3-Vb-h0g"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="190" id="Deg-iB-Efq">
+                                        <rect key="frame" x="0.0" y="1098" width="390" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Deg-iB-Efq" id="tCM-ca-gbU">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WFk-95-jEs">
+                                                    <rect key="frame" x="20" y="20" width="350" height="150"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Kkp-vB-FSV">
+                                                            <rect key="frame" x="10" y="10" width="330" height="130"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R7H-p7-IGi">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="60"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Дата обработки от блох?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWZ-iw-dbn">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="01.02.2022" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sUd-w8-63f">
+                                                                            <rect key="frame" x="0.0" y="30" width="330" height="30"/>
+                                                                            <color key="backgroundColor" red="1" green="0.82104686469999999" blue="0.49368229990000001" alpha="0.79738278419999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="30" id="2bC-ba-7Su"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DVb-Nd-cod">
+                                                                    <rect key="frame" x="0.0" y="70" width="330" height="60"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Дата повторной обработки?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyB-bI-BnK">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="01.08.2022" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RD2-e2-2cY">
+                                                                            <rect key="frame" x="0.0" y="30" width="330" height="30"/>
+                                                                            <color key="backgroundColor" red="1" green="0.82104686469999999" blue="0.49368229990000001" alpha="0.79738278419999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="30" id="FMW-p0-HHH"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="20"/>
+                                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.94206399269999996" blue="0.79895674989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="Kkp-vB-FSV" secondAttribute="bottom" constant="10" id="9w4-Kc-tsT"/>
+                                                        <constraint firstItem="Kkp-vB-FSV" firstAttribute="top" secondItem="WFk-95-jEs" secondAttribute="top" constant="10" id="KYj-kD-gzZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Kkp-vB-FSV" secondAttribute="trailing" constant="10" id="PvD-4n-wHL"/>
+                                                        <constraint firstItem="Kkp-vB-FSV" firstAttribute="leading" secondItem="WFk-95-jEs" secondAttribute="leading" constant="10" id="uQg-hb-cnr"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="WFk-95-jEs" secondAttribute="trailing" constant="20" symbolic="YES" id="2Ps-Jl-KV3"/>
+                                                <constraint firstItem="WFk-95-jEs" firstAttribute="leading" secondItem="tCM-ca-gbU" secondAttribute="leading" constant="20" symbolic="YES" id="Cc0-tV-wCf"/>
+                                                <constraint firstAttribute="bottom" secondItem="WFk-95-jEs" secondAttribute="bottom" constant="20" id="s5o-9c-atA"/>
+                                                <constraint firstItem="WFk-95-jEs" firstAttribute="top" secondItem="tCM-ca-gbU" secondAttribute="top" constant="20" id="tjp-Ek-fll"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="yZS-1g-nxD" id="KKY-SC-fT2"/>
+                            <outlet property="delegate" destination="yZS-1g-nxD" id="rjg-sp-iXg"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="NrS-AA-H2j"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="calendarButton" destination="CW9-tR-hbF" id="uE1-EW-Llp"/>
+                        <outlet property="calendarLabel" destination="Wqw-7e-WhR" id="jwh-bg-2Y9"/>
+                        <outlet property="contentViewImageCell" destination="3m8-K5-elj" id="2Oz-se-LCD"/>
+                        <outlet property="fifthContentView" destination="wEz-uQ-OLM" id="EeJ-jG-jjE"/>
+                        <outlet property="fourthContentView" destination="OrN-W2-rko" id="zjk-gu-5ca"/>
+                        <outlet property="petAge" destination="dXT-Mp-q1Z" id="VIa-xh-YNj"/>
+                        <outlet property="petBreed" destination="kBP-S2-6Ji" id="EOo-qT-MY0"/>
+                        <outlet property="petDateBugs" destination="sUd-w8-63f" id="3Td-nG-OtQ"/>
+                        <outlet property="petDateParasite" destination="W4q-83-UTl" id="y5S-de-Qr4"/>
+                        <outlet property="petDateRebugs" destination="RD2-e2-2cY" id="BiA-Mo-llz"/>
+                        <outlet property="petDateReparasite" destination="2oU-9C-MBb" id="YG1-vw-rNM"/>
+                        <outlet property="petDateRevaction" destination="sZG-UL-N43" id="bQN-iD-erQ"/>
+                        <outlet property="petDateVaction" destination="Vmc-GT-8Wg" id="amK-Pt-ozW"/>
+                        <outlet property="petGenderSelector" destination="xgY-KE-7dw" id="Z3n-NU-hiH"/>
+                        <outlet property="petImage" destination="b2r-Pk-LEz" id="QFE-Xr-dvd"/>
+                        <outlet property="petName" destination="Tsg-1o-kMX" id="QJW-XN-ayU"/>
+                        <outlet property="petType" destination="JBy-ZE-5eO" id="0yI-JN-S0Z"/>
+                        <outlet property="petTypeSelector" destination="dVH-q1-dqn" id="tuy-NW-8Qb"/>
+                        <outlet property="secondContentView" destination="zYZ-YW-dRb" id="dep-ft-OPt"/>
+                        <outlet property="sixthContentView" destination="WFk-95-jEs" id="xVB-ao-Dz5"/>
+                        <outlet property="thirdContentView" destination="P1M-4a-oIP" id="LNp-MB-rL2"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k2D-wG-Fz0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4900" y="-82"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lw5-e2-QTY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ppv-0x-KND" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="OuF-HI-PQq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JR7-pD-OMY">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.86230836870000005" blue="0.54135372569999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" systemColor="systemBrownColor"/>
+                        <color key="barTintColor" systemColor="systemBrownColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="22"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="30"/>
+                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="1" green="0.75108740510000005" blue="0.50103412729999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="shadowColor" red="1" green="0.75108740510000005" blue="0.50103412729999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="1" green="0.75108740510000005" blue="0.50103412729999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </navigationBarAppearance>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QuU-w8-7Uv" kind="relationship" relationship="rootViewController" id="i7o-Tp-K8G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ev2-4V-hYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2974" y="-461"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dmE-WN-YPW"/>
+        <segue reference="BVZ-Ce-Wie"/>
+        <segue reference="zLQ-8J-0GK"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="Logo" width="212.66667175292969" height="271.33334350585938"/>
+        <image name="TracesPNG" width="916" height="814"/>
+        <image name="Собака" width="400" height="400"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
