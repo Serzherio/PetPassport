@@ -70,7 +70,8 @@ class MainTableViewTableViewController: UITableViewController, DZNEmptyDataSetSo
             let swipeDeleteAlertController = UIAlertController (title: "Вы уверены?", message: "Информация о вашем питомце будет навсегда удалена", preferredStyle: .alert)
             let delete = UIAlertAction(title: "Удалить", style: .destructive, handler: {_ in
                 let pet = self.pets[indexPath.row]
-                self.deleteAllCalendarEvents(pet: pet)
+               // self.deleteAllCalendarEvents(pet: pet)
+                self.deleteEventInDeletingPet(pet: pet)
                 StorageManager.deleteObject(pet)
                 
                 tableView.deleteRows(at: [indexPath], with: .fade)
@@ -118,7 +119,6 @@ class MainTableViewTableViewController: UITableViewController, DZNEmptyDataSetSo
     
     private func deleteAllCalendarEvents(pet: Pet) {
         if pet.dateVaction != nil && pet.dateRevaction != nil {
-            print("dateVaction is \(pet.dateRevaction)")
             CalendarManager.shared.getEvent(date: pet.dateRevaction!) { events in
                 CalendarManager.shared.deleteEventByTitle(events: events,
                                                           title: "Вакцинация питомца \(pet.name)") {
@@ -141,11 +141,70 @@ class MainTableViewTableViewController: UITableViewController, DZNEmptyDataSetSo
                 }
             }
         }
-        
-        
-        
-        
     }
+        
+        
+       private func deleteEventInDeletingPet(pet: Pet) {
+            if pet.dateRevaction != nil {
+                CalendarManager.shared.getExistEvents(date: pet.dateRevaction!) { result in
+                    switch result {
+                    case .success(let events):
+                        CalendarManager.shared.deleteExistEvents(events: events,
+                                                                 title: "Вакцинация питомца \(pet.name)") { result in
+                            switch result {
+                            case .success(_):
+                                print("events were deleted")
+                            case .failure(let error):
+                                print("error is \(error.localizedDescription)")
+                            }
+                        }
+                    case .failure(let error):
+                        print("error is \(error.localizedDescription)")
+                    }
+                }
+            }
+            if pet.dateReparasite != nil {
+                CalendarManager.shared.getExistEvents(date: pet.dateReparasite!) { result in
+                    switch result {
+                    case .success(let events):
+                        CalendarManager.shared.deleteExistEvents(events: events,
+                                                                 title: "Обработка от глистов питомца \(pet.name)") { result in
+                            switch result {
+                            case .success(_):
+                                print("events were deleted")
+                            case .failure(let error):
+                                print("error is \(error.localizedDescription)")
+                            }
+                        }
+                    case .failure(let error):
+                        print("error is \(error.localizedDescription)")
+                    }
+                }
+            }
+            if pet.dateRebugs != nil {
+                CalendarManager.shared.getExistEvents(date: pet.dateRebugs!) { result in
+                    switch result {
+                    case .success(let events):
+                        CalendarManager.shared.deleteExistEvents(events: events,
+                                                                 title: "Обработка от насекомых питомца \(pet.name)") { result in
+                            switch result {
+                            case .success(_):
+                                print("events were deleted")
+                            case .failure(let error):
+                                print("error is \(error.localizedDescription)")
+                            }
+                        }
+                    case .failure(let error):
+                        print("error is \(error.localizedDescription)")
+                    }
+                }
+            }
+        }
+        
+        
+        
+        
+    
     
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         let str = "Создайте свою первую карточку питомца!"

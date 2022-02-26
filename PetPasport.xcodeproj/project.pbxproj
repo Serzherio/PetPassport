@@ -11,6 +11,7 @@
 		D50896C025FDFE63003F6281 /* Vaction in Resources */ = {isa = PBXBuildFile; fileRef = D50896BD25FDFE62003F6281 /* Vaction */; };
 		D50896C125FDFE63003F6281 /* Bugs in Resources */ = {isa = PBXBuildFile; fileRef = D50896BE25FDFE63003F6281 /* Bugs */; };
 		D50896C225FDFE63003F6281 /* Parasites in Resources */ = {isa = PBXBuildFile; fileRef = D50896BF25FDFE63003F6281 /* Parasites */; };
+		D50AF47F27CA397E00BF8B0E /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50AF47E27CA397E00BF8B0E /* Errors.swift */; };
 		D51E1E60256891CA009D1ACF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51E1E5F256891CA009D1ACF /* InfoViewController.swift */; };
 		D51E1E622568A210009D1ACF /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51E1E612568A210009D1ACF /* WebKit.framework */; };
 		D57409662795597800F04FE2 /* AddPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57409652795597800F04FE2 /* AddPetViewController.swift */; };
@@ -40,6 +41,7 @@
 		D50896BE25FDFE63003F6281 /* Bugs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bugs; sourceTree = "<group>"; };
 		D50896BF25FDFE63003F6281 /* Parasites */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Parasites; sourceTree = "<group>"; };
 		D5093037271B41D20040C912 /* PetPasport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PetPasport.entitlements; sourceTree = "<group>"; };
+		D50AF47E27CA397E00BF8B0E /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		D51E1E5F256891CA009D1ACF /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		D51E1E612568A210009D1ACF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D57409652795597800F04FE2 /* AddPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				D5DA45F1256020800090A29E /* Controller */,
 				D5ABD2CC25FD66B200D247DB /* SupportingFiles */,
 				D57E1CEC27B44978003D02A4 /* CalendarManager.swift */,
+				D50AF47E27CA397E00BF8B0E /* Errors.swift */,
 			);
 			path = PetPasport;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5CED9F5249F6554003DCF39 /* AppDelegate.swift in Sources */,
+				D50AF47F27CA397E00BF8B0E /* Errors.swift in Sources */,
 				D5CED9F7249F6554003DCF39 /* SceneDelegate.swift in Sources */,
 				D5F6066F25F69D59002DF1AE /* UIScrollView+EmptyDataSet.m in Sources */,
 				D57409682795805900F04FE2 /* AddPetTableViewController.swift in Sources */,
