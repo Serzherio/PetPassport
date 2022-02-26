@@ -34,7 +34,7 @@ class CalendarManager {
                 
                 let stringDate = formatter1.string(from: startDate!)
                 print(stringDate)
-                let date: Date = formatter2.date(from: stringDate + " " + "10:00:00")!
+                let date: Date = formatter2.date(from: stringDate + " " + "12:00:00")!
                 event.startDate = date
                 event.endDate = date
                 event.notes = notes
