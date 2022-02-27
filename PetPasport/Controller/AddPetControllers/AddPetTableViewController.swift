@@ -278,8 +278,7 @@ class AddPetTableViewController: UITableViewController, UITextFieldDelegate, UIN
         }
         
         if currentPet != nil {
-            
-            //            createEventsInCalendar(pet: currentPet!)
+            createEventVaction(pet: newPet)
             
             try! realm.write {
                 currentPet?.name = newPet.name
@@ -298,20 +297,82 @@ class AddPetTableViewController: UITableViewController, UITextFieldDelegate, UIN
                 currentPet?.oestrusDates.removeAll()
                 currentPet?.oestrusDates.append(objectsIn: dateRange)
                 
-                createVactionEventInCalendar(pet: newPet)
-                createParasiteEventInCalendar(pet: newPet)
-                createBugsEventInCalendar(pet: newPet)
+                
+                //createVactionEventInCalendar(pet: newPet)
+                //createParasiteEventInCalendar(pet: newPet)
+               // createBugsEventInCalendar(pet: newPet)
                 
                 
             }
+            
         } else {
             StorageManager.saveObject(newPet)
             dateRange = []
-            createVactionEventInCalendar(pet: newPet)
-            createParasiteEventInCalendar(pet: newPet)
-            createBugsEventInCalendar(pet: newPet)
+        
+            createEventVaction(pet: newPet)
+            //createVactionEventInCalendar(pet: newPet)
+            //createParasiteEventInCalendar(pet: newPet)
+           // createBugsEventInCalendar(pet: newPet)
         }
     }
+    
+    
+    // MARK: - create events logic
+    private func createEventVaction(pet: Pet) {
+        if pet.dateRevaction != nil {
+            if currentPet?.dateRevaction != nil {
+                CalendarManager.shared.getExistEvents(date: currentPet!.dateRevaction!) { result in
+                    switch result {
+                    case .success(let events):
+                        CalendarManager.shared.deleteExistEvents(events: events,
+                                                                 title: "Вакцинация питомца \(pet.name)") { result in
+                            switch result {
+                            case .success(let response):
+                                print(response)
+                                CalendarManager.shared.createNewEvent(startDate: pet.dateRevaction,
+                                                                      title: "Вакцинация питомца \(pet.name)",
+                                                                      notes: "Проведите повторную вакцинацию питомца и обновите информацию в приложении Pet Passport") { resultOfCreate in
+                                    switch resultOfCreate {
+                                    case .success(_):
+                                        print("Вакцинация питомца успешно изменена")
+                                    case .failure(let error):
+                                        print(error.localizedDescription)
+                                    }
+                                }
+                            case .failure(let error):
+                                print(error.localizedDescription)
+                            }
+                        }
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        CalendarManager.shared.createNewEvent(startDate: pet.dateRevaction,
+                                                              title: "Вакцинация питомца \(pet.name)",
+                                                              notes: "Проведите повторную вакцинацию питомца и обновите информацию в приложении Pet Passport") { result in
+                            switch result {
+                            case .success(_):
+                                print("Вакцинация питомца успешно создана")
+                            case .failure(let error):
+                                print(error.localizedDescription)
+                            }
+                        }
+                    } //switch result
+                } // CalendarManager.shared.getExistEvents
+            } else { // if currentPet?.dateRevaction != nil
+                CalendarManager.shared.createNewEvent(startDate: pet.dateRevaction,
+                                                      title: "Вакцинация питомца \(pet.name)",
+                                                      notes: "Проведите повторную вакцинацию питомца и обновите информацию в приложении Pet Passport") { result in
+                    switch result {
+                    case .success(_):
+                        print("Вакцинация питомца успешно создана")
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
+            } // if currentPet?.dateRevaction == nil
+        } //if pet.dateRevaction != nil
+    }
+    
+    
     
     private func createVactionEventInCalendar(pet: Pet) {
         

@@ -83,7 +83,7 @@ class Pet: Object {
                 let timeFull = timeLast + timeStartToNow
                 // Setup progress Bar for pet
                 cell.PetIndicator.progress = Float(timeLast)
-                cell.PetIndicator.setProgress(Float(timeLast/timeFull), animated: true)
+                cell.PetIndicator.setProgress(Float(timeLast/timeFull), animated: false)
                 let lastDays = (lroundf(Float(timeLast/60/60/24)))
                 if lastDays <= 0 {
                     cell.petStatus.text = "Питомец не вакцинирован"
