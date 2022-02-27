@@ -121,7 +121,6 @@ class CalendarManager {
     func deleteEventByTitle(events: [EKEvent], title: String, finished: @escaping () -> Void) {
         if !events.isEmpty {
             for i in events {
-                print(i.title)
                 if i.title == title {
                     do {
                         try eventStore.remove(i, span: .thisEvent, commit: true)
@@ -131,6 +130,172 @@ class CalendarManager {
                 }
             }
         }
+    }
+    
+    
+    // MARK: - create events logic
+    func createEventVaction(pet: Pet, currentPet: Pet?) {
+        if pet.dateRevaction != nil {
+            if currentPet?.dateRevaction != nil {
+                CalendarManager.shared.getExistEvents(date: currentPet!.dateRevaction!) { result in
+                    switch result {
+                    case .success(let events):
+                        CalendarManager.shared.deleteExistEvents(events: events,
+                                                                 title: "Вакцинация питомца \(pet.name)") { result in
+                            switch result {
+                            case .success(let response):
+                                print(response)
+                                CalendarManager.shared.createNewEvent(startDate: pet.dateRevaction,
+                                                                      title: "Вакцинация питомца \(pet.name)",
+                                                                      notes: "Проведите повторную вакцинацию питомца и обновите информацию в приложении Pet Passport") { resultOfCreate in
+                                    switch resultOfCreate {
+                                    case .success(_):
+                                        print("Вакцинация питомца успешно изменена")
+                                    case .failure(let error):
+                                        print(error.localizedDescription)
+                                    }
+                                }
+                            case .failure(let error):
+                                print(error.localizedDescription)
+                            }
+                        }
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        CalendarManager.shared.createNewEvent(startDate: pet.dateRevaction,
+                                                              title: "Вакцинация питомца \(pet.name)",
+                                                              notes: "Проведите повторную вакцинацию питомца и обновите информацию в приложении Pet Passport") { result in
+                            switch result {
+                            case .success(_):
+                                print("Вакцинация питомца успешно создана")
+                            case .failure(let error):
+                                print(error.localizedDescription)
+                            }
+                        }
+                    } //switch result
+                } // CalendarManager.shared.getExistEvents
+            } else { // if currentPet?.dateRevaction != nil
+                CalendarManager.shared.createNewEvent(startDate: pet.dateRevaction,
+                                                      title: "Вакцинация питомца \(pet.name)",
+                                                      notes: "Проведите повторную вакцинацию питомца и обновите информацию в приложении Pet Passport") { result in
+                    switch result {
+                    case .success(_):
+                        print("Вакцинация питомца успешно создана")
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
+            } // if currentPet?.dateRevaction == nil
+        } //if pet.dateRevaction != nil
+    }
+    
+    
+    
+    func createEventParasite(pet: Pet, currentPet: Pet?) {
+        if pet.dateReparasite != nil {
+            if currentPet?.dateReparasite != nil {
+                CalendarManager.shared.getExistEvents(date: currentPet!.dateReparasite!) { result in
+                    switch result {
+                    case .success(let events):
+                        CalendarManager.shared.deleteExistEvents(events: events,
+                                                                 title: "Обработка от глистов питомца \(pet.name)") { result in
+                            switch result {
+                            case .success(let response):
+                                print(response)
+                                CalendarManager.shared.createNewEvent(startDate: pet.dateReparasite,
+                                                                      title: "Обработка от глистов питомца \(pet.name)",
+                                                                      notes: "Проведите повторную обработку от глистов питомца и обновите информацию в приложении Pet Passport") { resultOfCreate in
+                                    switch resultOfCreate {
+                                    case .success(_):
+                                        print("От глистов питомца успешно изменена")
+                                    case .failure(let error):
+                                        print(error.localizedDescription)
+                                    }
+                                }
+                            case .failure(let error):
+                                print(error.localizedDescription)
+                            }
+                        }
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        CalendarManager.shared.createNewEvent(startDate: pet.dateReparasite,
+                                                              title: "Обработка от глистов питомца \(pet.name)",
+                                                              notes: "Проведите повторную обработку от глистов питомца и обновите информацию в приложении Pet Passport") { resultOfCreate in
+                            switch resultOfCreate {
+                            case .success(_):
+                                print("От глистов питомца успешно изменена")
+                            case .failure(let error):
+                                print(error.localizedDescription)
+                            }
+                        }
+                    } //switch result
+                } // CalendarManager.shared.getExistEvents
+            } else { // if currentPet?.dateRevaction != nil
+                CalendarManager.shared.createNewEvent(startDate: pet.dateReparasite,
+                                                      title: "Обработка от глистов питомца \(pet.name)",
+                                                      notes: "Проведите повторную обработку от глистов питомца и обновите информацию в приложении Pet Passport") { resultOfCreate in
+                    switch resultOfCreate {
+                    case .success(_):
+                        print("От глистов питомца успешно изменена")
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
+            } // if currentPet?.dateRevaction == nil
+        } //if pet.dateRevaction != nil
+    }
+    
+    func createEventBugs(pet: Pet, currentPet: Pet?) {
+        if pet.dateRebugs != nil {
+            if currentPet?.dateRebugs != nil {
+                CalendarManager.shared.getExistEvents(date: currentPet!.dateRebugs!) { result in
+                    switch result {
+                    case .success(let events):
+                        CalendarManager.shared.deleteExistEvents(events: events,
+                                                                 title: "Обработка от глистов питомца \(pet.name)") { result in
+                            switch result {
+                            case .success(let response):
+                                print(response)
+                                CalendarManager.shared.createNewEvent(startDate: pet.dateRebugs,
+                                                                      title: "Обработка от насекомых питомца \(pet.name)",
+                                                                      notes: "Проведите повторную обработку от насекомых питомца и обновите информацию в приложении Pet Passport") { resultOfCreate in
+                                    switch resultOfCreate {
+                                    case .success(_):
+                                        print("От насекомых питомца успешно изменена")
+                                    case .failure(let error):
+                                        print(error.localizedDescription)
+                                    }
+                                }
+                            case .failure(let error):
+                                print(error.localizedDescription)
+                            }
+                        }
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                        CalendarManager.shared.createNewEvent(startDate: pet.dateRebugs,
+                                                              title: "Обработка от насекомых питомца \(pet.name)",
+                                                              notes: "Проведите повторную обработку от насекомых питомца и обновите информацию в приложении Pet Passport") { resultOfCreate in
+                            switch resultOfCreate {
+                            case .success(_):
+                                print("От насекомых питомца успешно изменена")
+                            case .failure(let error):
+                                print(error.localizedDescription)
+                            }
+                        }
+                    } //switch result
+                } // CalendarManager.shared.getExistEvents
+            } else { // if currentPet?.dateRevaction != nil
+                CalendarManager.shared.createNewEvent(startDate: pet.dateRebugs,
+                                                      title: "Обработка от насекомых питомца \(pet.name)",
+                                                      notes: "Проведите повторную обработку от насекомых питомца и обновите информацию в приложении Pet Passport") { resultOfCreate in
+                    switch resultOfCreate {
+                    case .success(_):
+                        print("От насекомых питомца успешно изменена")
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
+                }
+            } // if currentPet?.dateRevaction == nil
+        } //if pet.dateRevaction != nil
     }
     
     
