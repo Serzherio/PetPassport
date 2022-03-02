@@ -21,6 +21,7 @@ class CalendarManager {
     private var currentTime = Date()
     private var calendar: EKCalendar!
     
+    
     func createNewEvent(startDate: Date?, title: String?, notes: String?, completion: @escaping (Result<String,Error>) -> Void) {
         eventStore.requestAccess(to: EKEntityType.event) { granted, error in
             if error == nil {

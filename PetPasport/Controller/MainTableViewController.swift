@@ -87,7 +87,7 @@ class MainTableViewTableViewController: UITableViewController, DZNEmptyDataSetSo
     }
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let editAction = UIContextualAction(style: .normal, title: "Редактировать") {  (contextualAction, view, boolValue) in
+        let editAction = UIContextualAction(style: .normal, title: "Изменить") {  (contextualAction, view, boolValue) in
             self.globalIndexPath = indexPath
             let swipeEditAlertController = UIAlertController (title: "Хотите изменить информацию о питомце?", message: "", preferredStyle: .alert)
             let delete = UIAlertAction(title: "Изменить", style: .default, handler: {_ in
@@ -99,7 +99,7 @@ class MainTableViewTableViewController: UITableViewController, DZNEmptyDataSetSo
             swipeEditAlertController.addAction(cancel)
             self.present(swipeEditAlertController, animated: true)
         }
-        editAction.backgroundColor = UIColor.systemBrown
+        editAction.backgroundColor = UIColor.systemGreen
         let swipeActions = UISwipeActionsConfiguration(actions: [editAction])
         return swipeActions
     }
@@ -247,8 +247,6 @@ class MainTableViewTableViewController: UITableViewController, DZNEmptyDataSetSo
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-     
         if segue.identifier == "showDetail" {
             guard let addPetVC = segue.destination as? AddPetViewController else {return}
             addPetVC.currentPet = pets[globalIndexPath.row]

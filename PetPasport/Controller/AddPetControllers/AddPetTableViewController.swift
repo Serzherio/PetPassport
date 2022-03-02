@@ -83,7 +83,6 @@ class AddPetTableViewController: UITableViewController, UITextFieldDelegate, UIN
     }
     
     // MARK: - IB actions
-    
     @IBAction func SelectPetType(_ sender: UISegmentedControl) {
         if petTypeSelector.selectedSegmentIndex == 0 {
             petTypeBool = true
@@ -298,13 +297,6 @@ class AddPetTableViewController: UITableViewController, UITextFieldDelegate, UIN
                 
                 currentPet?.oestrusDates.removeAll()
                 currentPet?.oestrusDates.append(objectsIn: dateRange)
-                
-                
-                //createVactionEventInCalendar(pet: newPet)
-                //createParasiteEventInCalendar(pet: newPet)
-               // createBugsEventInCalendar(pet: newPet)
-                
-                
             }
             
         } else {
@@ -314,158 +306,17 @@ class AddPetTableViewController: UITableViewController, UITextFieldDelegate, UIN
             CalendarManager.shared.createEventVaction(pet: newPet, currentPet: currentPet)
             CalendarManager.shared.createEventParasite(pet: newPet, currentPet: currentPet)
             CalendarManager.shared.createEventBugs(pet: newPet, currentPet: currentPet)
-//            createEventVaction(pet: newPet)
-            //createVactionEventInCalendar(pet: newPet)
-            //createParasiteEventInCalendar(pet: newPet)
-           // createBugsEventInCalendar(pet: newPet)
         }
     }
     
-    
-//    // MARK: - create events logic
-//    private func createEventVaction(pet: Pet) {
-//        if pet.dateRevaction != nil {
-//            if currentPet?.dateRevaction != nil {
-//                CalendarManager.shared.getExistEvents(date: currentPet!.dateRevaction!) { result in
-//                    switch result {
-//                    case .success(let events):
-//                        CalendarManager.shared.deleteExistEvents(events: events,
-//                                                                 title: "Вакцинация питомца \(pet.name)") { result in
-//                            switch result {
-//                            case .success(let response):
-//                                print(response)
-//                                CalendarManager.shared.createNewEvent(startDate: pet.dateRevaction,
-//                                                                      title: "Вакцинация питомца \(pet.name)",
-//                                                                      notes: "Проведите повторную вакцинацию питомца и обновите информацию в приложении Pet Passport") { resultOfCreate in
-//                                    switch resultOfCreate {
-//                                    case .success(_):
-//                                        print("Вакцинация питомца успешно изменена")
-//                                    case .failure(let error):
-//                                        print(error.localizedDescription)
-//                                    }
-//                                }
-//                            case .failure(let error):
-//                                print(error.localizedDescription)
-//                            }
-//                        }
-//                    case .failure(let error):
-//                        print(error.localizedDescription)
-//                        CalendarManager.shared.createNewEvent(startDate: pet.dateRevaction,
-//                                                              title: "Вакцинация питомца \(pet.name)",
-//                                                              notes: "Проведите повторную вакцинацию питомца и обновите информацию в приложении Pet Passport") { result in
-//                            switch result {
-//                            case .success(_):
-//                                print("Вакцинация питомца успешно создана")
-//                            case .failure(let error):
-//                                print(error.localizedDescription)
-//                            }
-//                        }
-//                    } //switch result
-//                } // CalendarManager.shared.getExistEvents
-//            } else { // if currentPet?.dateRevaction != nil
-//                CalendarManager.shared.createNewEvent(startDate: pet.dateRevaction,
-//                                                      title: "Вакцинация питомца \(pet.name)",
-//                                                      notes: "Проведите повторную вакцинацию питомца и обновите информацию в приложении Pet Passport") { result in
-//                    switch result {
-//                    case .success(_):
-//                        print("Вакцинация питомца успешно создана")
-//                    case .failure(let error):
-//                        print(error.localizedDescription)
-//                    }
-//                }
-//            } // if currentPet?.dateRevaction == nil
-//        } //if pet.dateRevaction != nil
-//    }
-    
-    
-    
-    
-    
-    
-    
-//    private func createVactionEventInCalendar(pet: Pet) {
-//
-//        if pet.dateVaction != nil && pet.dateRevaction != nil {
-//            if self.currentPet?.dateVaction != nil && self.currentPet?.dateRevaction != nil {
-//                CalendarManager.shared.getEvent(date: (currentPet?.dateRevaction)!) {existEvents in
-//                    print("existEvents in dateVaction: \(existEvents.count)")
-//                    CalendarManager.shared.deleteEventByTitle(events: existEvents,
-//                                                              title: "Вакцинация питомца \(pet.name)") {
-//                        CalendarManager.shared.createEvent(startDate: pet.dateRevaction,
-//                                                           title: "Вакцинация питомца \(pet.name)",
-//                                                           notes: "Проведите повторную вакцинацию питомца и обновите информацию в приложении Pet Passport") {
-//                            print("KEK1")
-//                        }
-//                    }
-//                }
-//            } else {
-//                CalendarManager.shared.createEvent(startDate: pet.dateRevaction,
-//                                                   title: "Вакцинация питомца \(pet.name)",
-//                                                   notes: "Проведите повторную вакцинацию питомца и обновите информацию в приложении Pet Passport") {
-//                    print("KEK1")
-//                }
-//            }
-//        }
-//    }
-    
-//    private func createParasiteEventInCalendar(pet: Pet) {
-//
-//        if pet.dateParasite != nil && pet.dateReparasite != nil {
-//            if self.currentPet?.dateParasite != nil && self.currentPet?.dateReparasite != nil {
-//                CalendarManager.shared.getEvent(date: (currentPet?.dateReparasite)!) {existEvents in
-//                    print("existEvents in dateParasite: \(existEvents.count)")
-//                    CalendarManager.shared.deleteEventByTitle(events: existEvents, title: "Обработка от глистов питомца \(pet.name)") {
-//                        CalendarManager.shared.createEvent(startDate: pet.dateReparasite,
-//                                                           title: "Обработка от глистов питомца \(pet.name)",
-//                                                           notes: "Проведите повторную обратобку от глистов питомца и обновите информацию в приложении Pet Passport") {
-//                            print("KEK2")
-//                        }
-//                    }
-//                }
-//            } else {
-//                CalendarManager.shared.createEvent(startDate: pet.dateReparasite,
-//                                                   title: "Обработка от глистов питомца \(pet.name)",
-//                                                   notes: "Проведите повторную обратобку от глистов питомца и обновите информацию в приложении Pet Passport") {
-//                    print("KEK2")
-//                }
-//            }
-//        }
-//    }
-    
-    
-//    private func createBugsEventInCalendar(pet: Pet) {
-//        if pet.dateBugs != nil && pet.dateRebugs != nil {
-//            if self.currentPet?.dateBugs != nil && self.currentPet?.dateRebugs != nil {
-//                CalendarManager.shared.getEvent(date: (currentPet?.dateRebugs)!) {existEvents in
-//                    print("existEvents in dateBugs: \(existEvents.count)")
-//                    CalendarManager.shared.deleteEventByTitle(events: existEvents, title: "Обработка от насекомых питомца \(pet.name)") {
-//                        CalendarManager.shared.createEvent(startDate: pet.dateRebugs,
-//                                                           title: "Обработка от насекомых питомца \(pet.name)",
-//                                                           notes: "Проведите повторную обработку от насекомых питомца и обновите информацию в приложении Pet Passport") {
-//                            print("KEK3")
-//                        }
-//                    }
-//                }
-//            } else {
-//                CalendarManager.shared.createEvent(startDate: pet.dateRebugs,
-//                                                   title: "Обработка от насекомых питомца \(pet.name)",
-//                                                   notes: "Проведите повторную обработку от насекомых питомца и обновите информацию в приложении Pet Passport") {
-//                    print("KEK3")
-//                }
-//            }
-//        }
-//    }
-    
-          
- 
-    
-    
-    
-    
-    
-    
-    
-    
+    // MARK: - segues
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "setCalendar" {
+            guard let vc = segue.destination as? CalendarViewController else {return}
+            vc.calendarDelegate = self
+            vc.dates = dateRange
+        }
+    }
     
     
     
@@ -546,6 +397,8 @@ extension AddPetTableViewController: UIImagePickerControllerDelegate {
 }
 
 
+
+
 //MARK: - Text Field Delegate
 extension AddPetTableViewController {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -566,6 +419,15 @@ extension AddPetTableViewController {
             delegate?.notFillPetNameTextField()
         }
     }
+}
+
+// MARK: - calendarProtocol
+extension AddPetTableViewController: SaveCalendarDataDelegate {
+    func saveData(dates: [String]) {
+        self.dateRange = dates
+    }
+    
+    
 }
 
 

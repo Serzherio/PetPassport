@@ -14,3 +14,7 @@ protocol AddPetTableViewControllerDelegate: class {
     func notFillPetNameTextField()
     func saveButtonTapped()
 }
+
+protocol SaveCalendarDataDelegate: class {
+    func saveData(dates: [String])
+}

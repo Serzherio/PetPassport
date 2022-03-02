@@ -14,7 +14,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegateAppearance, FS
     @IBOutlet weak var calendar: FSCalendar!
     var dates = [String]()
     let dateFormatter = DateFormatter()
-   
+    var calendarDelegate: SaveCalendarDataDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,10 @@ class CalendarViewController: UIViewController, FSCalendarDelegateAppearance, FS
             for each in dates {
                 calendar.select(dateFormatter.date(from: each))
             }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.calendarDelegate?.saveData(dates: dates)
     }
 
     
