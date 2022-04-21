@@ -74,6 +74,22 @@ class AddPetTableViewController: UITableViewController, UITextFieldDelegate, UIN
 
         //Метод для активации кнопки при вводе текста в поле имя
         petName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -377,7 +393,7 @@ class AddPetTableViewController: UITableViewController, UITextFieldDelegate, UIN
 // MARK: - Work with image
 extension AddPetTableViewController: UIImagePickerControllerDelegate {
     
-    func chooseImagePicker (sourse: UIImagePickerController.SourceType) {
+    func chooseImagePicker(sourse: UIImagePickerController.SourceType) {
         if UIImagePickerController.isSourceTypeAvailable(sourse){
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self

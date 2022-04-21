@@ -868,7 +868,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" id="6mT-7s-uGM">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1420,15 +1420,13 @@
                             <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="30"/>
                             <color key="textColor" systemColor="systemBackgroundColor"/>
                         </textAttributes>
-                        <navigationBarAppearance key="standardAppearance">
-                            <color key="backgroundColor" red="1" green="0.75108740510000005" blue="0.50103412729999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <color key="shadowColor" red="1" green="0.75108740510000005" blue="0.50103412729999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </navigationBarAppearance>
-                        <navigationBarAppearance key="scrollEdgeAppearance">
-                            <color key="backgroundColor" red="1" green="0.75108740510000005" blue="0.50103412729999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </navigationBarAppearance>
+                        <navigationBarAppearance key="standardAppearance"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cuo-F2-H0z">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="QuU-w8-7Uv" kind="relationship" relationship="rootViewController" id="i7o-Tp-K8G"/>
                     </connections>
