@@ -83,6 +83,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="140" id="NIE-B5-7v6"/>
+                                                <constraint firstAttribute="trailing" secondItem="EMe-ed-16B" secondAttribute="trailing" id="h8q-A7-keB"/>
+                                                <constraint firstItem="EMe-ed-16B" firstAttribute="leading" secondItem="MSc-Z9-yZs" secondAttribute="leading" id="pGf-V6-xCW"/>
                                             </constraints>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mgi-3T-AwH">

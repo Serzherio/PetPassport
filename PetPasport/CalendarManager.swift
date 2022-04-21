@@ -40,11 +40,14 @@ class CalendarManager {
                 event.calendar = self.eventStore.defaultCalendarForNewEvents
                 event.addAlarm(EKAlarm(relativeOffset: 0))
                 
-                do {
-                    try self.eventStore.save(event, span: .thisEvent, commit: true)
-                    completion(.success(""))
-                } catch {
-                    completion(.failure(CalendarError.eventsCannotBeCreated))
+                DispatchQueue.main.async {
+                    do {
+                        try self.eventStore.save(event, span: .thisEvent, commit: true)
+                        completion(.success(""))
+                    } catch {
+                        completion(.failure(CalendarError.eventsCannotBeCreated))
+                    }
+
                 }
             }
         }
