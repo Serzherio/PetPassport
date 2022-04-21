@@ -1,4 +1,4 @@
-# PetPasport
+# PetPassport
 Стек: UIKit, SB, Realm, FSCalendar, EventKit, EventKitUI, DZNEmptyDataSetSource
 
 ##
